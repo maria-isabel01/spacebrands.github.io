@@ -17,7 +17,6 @@
   padding-bottom: 1rem;
 }
 
-
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -107,8 +106,6 @@
   object-fit: cover;
 }
 
-
-
 .rigth {
   text-align: right;
 }
@@ -158,9 +155,6 @@
 
 footer {
 
-
-
-
   #social-icons {
     justify-content: flex-end;
     bottom: 10px;
@@ -172,8 +166,6 @@ footer {
     padding-bottom: 0.5rem;
   }
 
-
-
   #social-icons svg,
   #social-icon svg {
     width: 20px;
@@ -182,11 +174,9 @@ footer {
     transition: transform 0.3s ease;
   }
 
-
   #social-icons svg:hover {
     transform: scale(1.2);
   }
-
 
   #social-icons {
     opacity: 0.8;
@@ -254,7 +244,6 @@ footer {
   max-width: 500% !important;
 }
 
-
 @media (max-width: 768px) {
   .fix-12-12 {
     display: flex;
@@ -273,8 +262,6 @@ footer {
       display: contents;
     }
   }
-
-
 
 }
 
@@ -375,17 +362,10 @@ footer {
 }
 
 
-/* CARRUSEL */
-
 .no-carrusel {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-
-
-
-
-
 
 .side {
   position: fixed;
@@ -490,7 +470,6 @@ footer {
   margin: 0
 }
 
-
 .contents {
   padding: 2rem !important;
 }
@@ -501,13 +480,10 @@ footer {
 
 .slide {
   background: rgba(0, 0, 0, 0.6);
-
-  /*position: fixed;*/
   background: #111;
   color: #fff;
   z-index: 10;
   overflow: hidden;
-
 }
 
 img {
@@ -534,7 +510,6 @@ body {
   min-height: 100vh !important;
 }
 
-
 .content {
   overflow: hidden !important;
   overflow: hidden;
@@ -545,8 +520,6 @@ body {
   height: 100%;
   z-index: 100;
 }
-
-
 
 footer {
   color: white !important;
@@ -559,7 +532,6 @@ footer {
   display: flex !important;
   flex-direction: column !important;
 }
-
 
 .background {
   position: fixed !important;
@@ -594,7 +566,6 @@ body {
 }
 
 .footer-column {
-  background-color: #333;
   color: white;
   padding: 1rem;
   text-align: center;
