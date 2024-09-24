@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <title>SPACEBRANDS</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Material+Icons&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="css/slides-customized.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/sytles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/slides.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="slides stack smooth fast smoothScroll animated noPreload">
+
+  <audio id="background-audio" loop>
+    <source src="audio/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Inicializa Swiper
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+        slidesPerView: 3,
+        spaceBetween: 2,
+      });
+
+      // Manejo de audio
+      var audio = document.getElementById("background-audio");
+      audio.volume = 0.2;
+
+      function playAudio() {
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log("El audio se está reproduciendo.");
+          }).catch(error => {
+            console.log("Error al reproducir el audio:", error);
+          });
+        }
+      }
+
+      playAudio();
+
+      document.body.addEventListener("click", function () {
+        if (audio.paused) {
+          playAudio();
+        }
+      });
+    });
+
+
+    function createFooter() {
+      const footerHTML = `
+    <footer class="footer-column">
+      <div class="container-footer">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div class="left" style="flex: 1;">
+                  <a class="small corr" id="contact-info" href="#">
+                      Contáctanos para formar parte de nuestra red de distribución
+                  </a><br>
+                  <span id="social-icon">
+                      <svg class="ali">
+                          <use xlink:href="#mail"></use>
+                      </svg>
+                      <span class="small ali corr toLeft">accounting@spacebrands.shop</span>
+                  </span>
+              </div>
+              <a class="titulo" href="#" style="flex: 1; text-align: center;">
+                  Únete a nuestro grupo de socios estratégicos
+              </a>
+              <ul class="social opacity-8 icnsF" id="social-icons" style="flex: 1; display: flex; justify-content: flex-end;">
+                  <li>
+                      <a href="https://www.facebook.com/SpaceBrandsM/" target="_blank" aria-label="Facebook">
+                          <svg>
+                              <use xlink:href="#facebook"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/spacebrandss/" target="_blank" aria-label="Instagram">
+                          <svg>
+                              <use xlink:href="#instagram"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.linkedin.com/company/space-brands" target="_blank" aria-label="LinkedIn">
+                          <svg>
+                              <use xlink:href="#linkedin"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.tiktok.com/@spacebrands" target="_blank" aria-label="Tiktok">
+                          <svg>
+                              <use xlink:href="#twitter"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
+                          <svg>
+                              <use xlink:href="#whatsapp"></use>
+                          </svg>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="brd" style="text-align: center; margin-top: 1rem;">
+              <a class="titulo" href="#">
+                  Todos los derechos de autor reservados por Space Brands © 2024
+              </a>
+          </div>
+      </div>
+    </footer>
+    `;
+
+      const footers = document.querySelectorAll('.footer-placeholder');
+
+      footers.forEach(footerPlaceholder => {
+        footerPlaceholder.innerHTML = footerHTML;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', createFooter);
+
+  </script>
+
+  <nav class="side stroke">
+    <div class="navigation default">
+      <ul></ul>
+    </div>
+  </nav>
+
+  <nav class="panel top hideOnScroll">
+    <!-- Desktop Navigation -->
+    <div class="sections desktop">
+      <div class="left">
+        <a href="#" title="SpaceBrands">
+          <img src="asset/svg/logo.svg" height="30px" class="fondo-log" alt="SpaceBrands" />
+        </a>
+      </div>
+      <div class="center">
+        <ul class="menu">
+          <li><a id="play-audio" href="#spacebrands">Home</a></li>
+          <li><a href="#estrategia">Estrategia</a></li>
+          <li><a href="#abordar">Servicios</a></li>
+          <li><a href="#canales">Caneles de Ventas</a></li>
+          <li><a href="#line">LINE</a></li>
+          <li><a href="#tecnologia">Tecnologia</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <span class="button actionButton sidebarTrigger" data-sidebar-id="1">
+          <svg class="icon">
+            <use xlink:href="#menu"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <!-- Compact Navigation -->
+    <div class="sections compact hidden">
+      <div class="left">
+        <a href="#" title="SpaceBrands">
+          <img src="asset/svg/logo.svg" height="24px" alt="SpaceBrands" />
+        </a>
+      </div>
+      <div class="right">
+        <span class="button actionButton sidebarTrigger" data-sidebar-id="1">
+          <svg class="icon">
+            <use xlink:href="#menu"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="sidebar" data-sidebar-id="1">
+    <div class="close">
+      <svg class="icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </div>
+    <div class="content">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="asset/svg/logo.svg" height="24px" alt="spacebrands" />
+      </a>
+
+      <!-- Menu -->
+      <ul class="subMenu small opacity-8 margin-top-3">
+        <li><a href="#" target="_blank">Catalogo de Productos</a></li>
+        <li>
+          <a href="https://www.google.com/maps/search/Jr+Leticia+564,+565+,+455+,+352/@-12.0568804,-77.0331555,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank">
+            Ubicación Lima Sur
+          </a>
+        </li>
+        <li>
+          <a href="https://www.google.com/maps/search/Jr+Bambas+561+%E2%80%93+Almac%C3%A9n+/@-12.0549533,-77.0354182,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank">
+            Ubicación Lima Norte - Centro
+          </a>
+        </li>
+        <li><a href="#" target="_blank">Contacto</a></li>
+        <li><a href="#" target="_blank">Saber más - Precios Calientes</a></li>
+
+      </ul>
+
+      <!-- Redes Sociales -->
+      <ul class="social opacity-8">
+        <li>
+          <a href="https://www.facebook.com/SpaceBrandsM/" target="_blank" aria-label="Facebook">
+            <svg>
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/spacebrandss/" target="_blank" aria-label="Instagram">
+            <svg>
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/space-brands" target="_blank" aria-label="LinkedIn">
+            <svg>
+              <use xlink:href="#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@spacebrands" target="_blank" aria-label="Tiktok">
+            <svg>
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
+            <svg>
+              <use xlink:href="#whatsapp"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section data-cid="slide-10-ef5acf51" class="slide fade-6" data-title="Home" data-name="spacebrands">
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+          <div class="fix-12-12 left">
+            <div class="fix-10-12">
+              <h1 class="margin-bottom-5 ae-1 center">
+                Distribuidor líder de las mejores marcas en tecnología y electrodomésticos
+              </h1>
+              <h5 class="margin-bottom-5 ae-1 center h5-1">
+                Especialistas en el canal offline y online, brindamos grandes experiencias para el cliente en cuanto a
+                precios y productos.
+              </h5>
+              <div class="margin-bottom-5 ae-3 fromRight relative lora_titulo custom-flex-86 fix-6-12 center">
+                <div class="text-86">
+                  Space Brands es el distribuidor líder de productos de tecnología y electrodomésticos en LATAM, con un
+                  staff de más de 20 años de experiencia en el sector Retail. Conectamos a las marcas más importantes
+                  con los principales retailers y marketplaces, gestionando una cartera de más de 500 productos del
+                  sector electrodomésticos.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+    </div>
+    <div class="background" style="background-image:url('./asset/img/img_fondo_1.jpeg');"></div>
+  </section>
+
+
+  <!-- Estrategia -->
+  <section data-cid="slide-30-a8e55e42" class="slide fade-6 " data-title="Estrategia" data-name="estrategia">
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+          <div class="fix-12-12 left">
+            <div class="fix-10-12 toLeft">
+              <h1 class="coreTitle margin-bottom-2 ae-1">Nuestra Estrategia</h1>
+            </div>
+            <ul class="flex margin-top-10">
+              <li class="col-3-12 margin-bottom-1 left ae-3">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/svg/estrategia/img1.svg" alt="Estrategia de ventas agresiva">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Estrategia de ventas agresiva</p>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">
+                      En Space Brands unificamos nuestros canales de ventas online y offline para maximizar el impacto
+                      de nuestras marcas. Gracias a nuestra red de distribución y relaciones con más de <strong>30
+                        retailers</strong> y/o
+                      <strong>marketplaces</strong> , aseguramos una penetración efectiva en el mercado.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-3-12 margin-bottom-1 left ae-4">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/liderazgo.png" alt="Liderazgo en tecnología">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Liderazgo en tecnología</p>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">Aliados con las principales marcas de
+                      tecnología,
+                      garantizamos innovación constante en nuestros procesos logísticos y comerciales. Nuestras
+                      plataformas tecnológicas nos permiten gestionar más de 10,000 SKU proyectando a corto mediano
+                      plazo más de <strong>30,000 transacciones mensuales en los próximos año 2025-2026</strong>,
+                      optimizando los tiempos de entrega
+                      y la experiencia
+                      del cliente.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-3-12 margin-bottom-1 left ae-5">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/lugares.png" alt="Expansión internacional">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Expansión internacional</p>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">
+                      Con operaciones consolidadas en <strong>LATAM, preparados </strong> para expandir
+                      nuestras actividades
+                      a nuevos mercados de Latinoamérica. En Bolivia, hemos desarrollado un modelo <strong>OEM</strong>
+                      (fabricante de
+                      equipos originales) que nos posiciona como referentes en el desarrollo de productos a medida.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-3-12 margin-bottom-1 left ae-6">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/moneda.png" alt="Eficiencia financiera">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Eficiencia financiera</p>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">Implementamos estrategias de inversión
+                      inteligente que nos permiten mantener precios competitivos. Con un crecimiento anual, garantizamos
+                      rentabilidad tanto para nuestros socios comerciales como para nuestros inversores<strong>15% TEA
+                        en
+                        ingresos</strong>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+
+    </div>
+    <div class="background" style="background-image:url('./asset/img/fondo8.jpeg');"></div>
+  </section>
+
+  <!-- Servicios -->
+  <section data-cid="slide-161-b914a482" class="slide fade-6" data-title="Abordar" data-name="abordar">
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+          <div class="fix-12-12 left">
+            <div class="fix-10-12 toLeft">
+              <h1 class="coreTitle margin-bottom-2 ae-1">Servicios Especializados para Nuestros Socios</h1>
+              <p class="ae-1 left">
+                Desarrollamos productos de tecnología de punta, específicamente diseñados para el mercado local,
+                trabajando desde el concepto hasta su implementación. </p>
+            </div>
+            <ul class="flex margin-top-10 servicios">
+              <li class="col-3-12 margin-bottom-1 left ae-4">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/manos.png" alt="Fuerza de Venta">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Fuerza de Ventas</p>
+                    <p class="cropBottom small opacity-8 center pt-3">
+                      Con más de 50 agentes de ventas directos y tercerizados especializados en dropshipping,
+                      desplegamos campañas a nivel nacional que incrementan la exposición de nuestras marcas y maximizan
+                      el retorno de inversión para nuestros socios.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-3-12 margin-bottom-1 left ae-5">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/bocina.png" alt="Marketing">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Marketing</p>
+                    <p class="cropBottom small opacity-8 center pt-3">
+                      Monitoreamos más de 1,000 puntos entre venta on line y offline a nivel nacional, utilizando
+                      herramientas avanzadas para establecer objetivos y controlar la rotación de inventarios,
+                      asegurando que los productos correctos estén en el lugar adecuado y en el momento preciso.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-3-12 margin-bottom-1 left ae-6">
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <div class="icons-c">
+                    <span class="crop button play white button-86 center">
+                      <img src="asset/img/call.png" alt="Servicio Técnico">
+                    </span>
+                  </div>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom center">Servicio Técnico</p>
+                    <p class="cropBottom small opacity-8 center pt-3">
+                      Proporcionamos soporte técnico completo en todas las regiones del país, asegurando un 97% de
+                      satisfacción del cliente gracias a tiempos de respuesta rápidos y eficientes, tanto para
+                      distribuidores como consumidores.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+    </div>
+    <div class="background" style="background-image:url('./asset/img/fondo2.webp');"></div>
+  </section>
+
+  <!-- Parnet (#5) -->
+  <section data-cid="slide-01-a330447f" class="slide fade-6" data-title="Canales" data-name="canales">
+    <div class="content parnet">
+      <div class="container">
+        <div class="wrap align-left">
+          <div class="fix-12-12">
+            <div class='fix-12-12 toLeft margin-bottom-5'>
+              <h1 class="coreTitle margin-bottom-2 ae-1">Nuestros Socios Estratégicos</h1>
+
+              <p class="cropBottom small opacity-8 center pt-3 pb-4">
+                Space Brands trabaja con más de <strong>30 retailers, supermercados y marketplaces</strong> en el
+                mercado, ofreciendo una
+                cobertura de distribución completa y una presencia consolidada en los principales canales de venta.
+              </p>
+
+              <div class="serv">
+                <!-- Sección 1 -->
+                <div class="section">
+                  <p class="smaller bold uppercase cropBottom center">Tiendas por departamento
+                  </p>
+                  <div class="rectangle">
+
+
+
+
+
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="center no-carrusel">
+                          <img src="asset/img/canales/oechsle_2019.png" alt="OES" width="80">
+                        </div>
+                        <div class="">
+                          <img src="asset/svg/canales/Logo_Ripley.svg" alt="RIP">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/img/canales/Estilos.png" alt="EVI" width="80">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Sección 3 -->
+                <div class="section">
+                  <p class="smaller bold uppercase cropBottom center">Especialistas
+                  </p>
+
+                  <div class="rectangle">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/carsa.svg" alt="Carsca" width="100">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/curacau.svg" alt="Curac" width="100">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/hiraoka.svg" alt="Hira" width="100">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                <!-- Sección 5 -->
+                <div class="section">
+                  <p class="smaller bold uppercase cropBottom center">Marketplaces
+
+                  </p>
+
+                  <div class="rectangle">
+                    <div class="swiper-container esp">
+                      <div class="swiper-wrapper">
+
+                        <div class="swiper-slide center">
+                          <img src="asset/svg/canales/juntos.svg" alt="Juns">
+                        </div>
+
+                        <div class="swiper-slide center">
+                          <img src="asset/svg/canales/falabella.svg" alt="Faba">
+                        </div>
+
+                        <div class="swiper-slide center">
+                          <img src="asset/img/canales/dinner.jpg" alt="Mal">
+                        </div>
+                        <div class="swiper-slide center">
+                          <img src="asset/svg/canales/mercado-libre.svg" alt="Meerc">
+                        </div>
+                        <div class="swiper-slide center">
+                          <img src="asset/img/marcas/marketplace/prec.png" alt="Prec">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Sección 4 -->
+                <div class="section">
+                  <p class="smaller bold uppercase cropBottom center">Home center
+                  </p>
+
+                  <div class="rectangle">
+                    <div class="">
+                      <div class="">
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/promart.svg" alt="Proma">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/sodimac.svg" alt="Sodi">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- Sección 2 -->
+                <div class="section">
+                  <p class="smaller bold uppercase cropBottom center">Supermercados
+                  </p>
+
+                  <div class="rectangle">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/cencosud.svg" alt="Censo" width="100">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/plaza_vea.svg" alt="Pla" width="100">
+                        </div>
+                        <div class="center no-carrusel">
+                          <img src="asset/svg/canales/tottus.svg" alt="Totus" width="100">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+
+
+
+              <p class="cropBottom small opacity-8 center pt-3">
+                Nuestra capacidad de distribución garantiza la presencia de nuestros productos en las plataformas online
+                más importantes de la región.
+              </p>
+
+
+            </div>
+
+            <div class="fix-12-12 toLeft">
+              <h1 class="coreTitle margin-bottom-2 ae-1 left">Cobertura de Distribución Offline
+              </h1>
+
+              <p class="cropBottom small opacity-8 center pt-3">
+                A través de una red de distribución que abarca las principales regiones del mercado, Space Brands
+                asegura la entrega eficiente y oportuna de productos a más de <strong> 400 puntos de venta físicos de
+                  nuestros
+                  aliados y/o partners </strong> en todo el territorio peruano. Nuestra estrategia logística nos permite
+                cubrir el
+                <strong>100% del territorio nacional,</strong> con operaciones diseñadas para optimizar tiempos y
+                costos.
+              </p>
+
+
+              <div class="serv pt-3">
+                <!-- Sección 1: Cuadros -->
+                <div class="section">
+                  <div class="cuadro left pt-5">
+                    <h5>NORTE</h5>
+                    <p>Chancafe Norte<br>Mi Negocio<br>E&M Cuba<br>Grupo Leoncito</p>
+                  </div>
+                  <div class="cuadro left pt-5">
+                    <h5>CENTRO</h5>
+                    <p> Importaciones Rubi<br>Yataco<br>EH Inversiones<br>Inche<br>Codisa & El Siglo<br>Lucero A.</p>
+                  </div>
+                </div>
+
+                <!-- Sección 2: Imagen -->
+                <div class="image-container">
+                  <img src="asset/img/mapa.png" width="400" alt="Mapa">
+                </div>
+
+                <!-- Sección 3: Los últimos dos cuadros -->
+                <div class="section">
+                  <div class="cuadro rigth">
+                    <h5>ORIENTE</h5>
+                    <p>Importaciones Yucra<br>Chancafe Oriente<br>Importaciones Laban<br>La Predilecta<br>Oro Verde y
+                      Oro Blanco</p>
+                  </div>
+                  <div class="cuadro rigth pt-5">
+                    <h5>SUR</h5>
+                    <p>Corporación Rocio<br>Mundovisión-Churata<br>Kamsa<br>A.F Quinto<br>Distribuciones Olazábal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+    </div>
+    <div class="background" style="background-image:url(./asset/img/prueba6.jpg)"></div>
+  </section>
+
+
+  <!-- LINE -->
+  <section data-cid="slide-30-a8e55e42" class="slide fade-6 " data-title="Line" data-name="line">
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+          <div class="fix-12-12">
+            <div class="fix-10-12">
+              <h1 class="coreTitle margin-bottom-2 ae-1 left">LINE</h1>
+              <img src="asset/svg/prueba.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+    </div>
+    <div class="background" style="background-image:url('./asset/img/fondo7.jpg');"></div>
+  </section>
+  <!-- Tecnología -->
+  <section data-cid="slide-30-a8e55e42" class="slide fade-6 " data-title="Tecnologia" data-name="tecnologia">
+    <div class="content">
+      <div class="container">
+        <div class="wrap tecno">
+          <div class="fix-12-12 left">
+            <div class="fix-10-12 toLeft">
+              <h1 class="margin-bottom-5 ae-1 fromLeft done">Tecnología e Innovación</h1>
+              <div>
+                <p>
+                  Nuestro enfoque en tecnología e innovación nos permite gestionar más de <strong>500,000
+                    transacciones</strong> al año a
+                  través de nuestras plataformas. Utilizando herramientas avanzadas de análisis de datos, optimizamos
+                  nuestros procesos de inventario, logística y ventas para mejorar la experiencia del cliente y
+                  maximizar la eficiencia operativa.
+                </p>
+
+
+
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+                  <span class="crop button play white button-86 center">
+                    <img src="asset/img/tiempo-real.png">
+                  </span>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom">Análisis de datos en tiempo real</p>
+                    <p class="cropBottom small opacity-8">Gracias a nuestras plataformas tecnológicas, tomamos
+                      decisiones basadas en datos que mejoran la rotación de inventarios y optimizan la gestión de
+                      productos.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done pt-4" data-popup-id="86-1">
+                  <span class="crop button play white button-86 center">
+                    <img src="asset/img/gestion.png">
+                  </span>
+                  <div class="text-86">
+                    <p class="smaller bold uppercase cropBottom">Gestión automatizada</p>
+                    <p class="cropBottom small opacity-8">Con herramientas propias de software, automatizamos la
+                      coordinación de envíos, gestión de precios y catálogo de productos en los principales
+                      marketplaces, reduciendo los errores humanos en un 90%.
+                    </p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-placeholder"></div>
+    </div>
+    <div class="background" style="background-image:url('./asset/img/foto2.avif');"></div>
+  </section>
+</body>
+
+</html>
+
+
+<svg style="display: none;">
+
+  <symbol id="mail" viewBox="0 0 18 18">
+    <path
+      d="M16 2h-14c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-10c0-1.1-.9-2-2-2zm0 2v.5l-7 4.3-7-4.4v-.4h14zm-14 10v-7.2l6.5 4c.1.1.3.2.5.2s.4-.1.5-.2l6.5-4v7.2h-14z" />
+  </symbol>
+
+  <symbol id="menu" viewBox="0 0 18 18">
+    <path
+      d="M16 5h-14c-.6 0-1-.4-1-1 0-.5.4-1 1-1h14c.5 0 1 .4 1 1s-.4 1-1 1zm-14 5h14c.5 0 1-.4 1-1 0-.5-.4-1-1-1h-14c-.6 0-1 .4-1 1s.4 1 1 1zm14 3h-14c-.5 0-1 .4-1 1 0 .5.4 1 1 1h14c.5 0 1-.4 1-1s-.4-1-1-1z" />
+  </symbol>
+
+  <symbol id="close" viewBox="0 0 30 30">
+    <path
+      d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z" />
+  </symbol>
+
+  <symbol id="facebook" viewBox="0 0 24 24">
+    <path
+      d="M24 1.3v21.3c0 .7-.6 1.3-1.3 1.3h-6.1v-9.3h3.1l.5-3.6h-3.6v-2.2c0-1.1.3-1.8 1.8-1.8h1.9v-3.2c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.7h-3.1v3.6h3.1v9.2h-11.5c-.7 0-1.3-.6-1.3-1.3v-21.4c0-.7.6-1.3 1.3-1.3h21.3c.8 0 1.4.6 1.4 1.3z" />
+  </symbol>
+
+  <symbol id="instagram" viewBox="0 0 20 20">
+    <circle cx="10" cy="10" r="3.3" />
+    <path
+      d="M13,0H7C2.2,0,0,2.2,0,7v6c0,4.8,2.1,7,7,7h6c4.8,0,7-2.2,7-7V7C20,2.2,17.9,0,13,0z M10,15.1c-2.8,0-5.1-2.3-5.1-5.1S7.2,4.9,10,4.9s5.1,2.3,5.1,5.1S12.8,15.1,10,15.1z M15.3,5.9c-0.7,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2C16.5,5.3,16,5.9,15.3,5.9z" />
+  </symbol>
+
+  <symbol id="linkedin" viewBox="0 0 24 24">
+    <path
+      d="M5.9 21.9h-4.7v-14.2h4.7v14.2zm-2.3-16.1c-1.6 0-2.6-1.1-2.6-2.5s1-2.5 2.7-2.5c1.6 0 2.6 1 2.6 2.5-.1 1.4-1.2 2.5-2.7 2.5zm19.2 16.1h-4.7v-7.6c0-2-.7-3.3-2.3-3.3-1.3 0-2.1.9-2.5 1.7-.1.3-.1.8-.1 1.2v7.9h-4.7v-14.1h4.7v2c.7-.9 1.7-2.3 4.3-2.3 3.1 0 5.5 2.1 5.5 6.4v8.2h-.2z" />
+  </symbol>
+
+  <symbol id="twitter" viewBox="0 1 24 23">
+    <path
+      d="M21.5 7.6v.6c0 6.6-5 14.1-14 14.1-2.8 0-5.4-.8-7.6-2.2l1.2.1c2.3 0 4.4-.8 6.1-2.1-2.2 0-4-1.5-4.6-3.4.3.1.6.1.9.1.5 0 .9-.1 1.3-.2-2.1-.6-3.8-2.6-3.8-5 .7.4 1.4.6 2.2.6-1.3-.9-2.2-2.4-2.2-4.1 0-.9.2-1.8.7-2.5 2.4 3 6.1 5 10.2 5.2-.1-.4-.1-.7-.1-1.1 0-2.7 2.2-5 4.9-5 1.4 0 2.7.6 3.6 1.6 1-.3 2.1-.7 3-1.3-.4 1.2-1.1 2.1-2.2 2.7 1-.1 1.9-.4 2.8-.8-.6 1.1-1.4 2-2.4 2.7z" />
+  </symbol>
+
+  <symbol id="whatsapp" viewBox="0 0 512 512">
+    <path
+      d="M256.064 0h-.128c-141.152 0-255.936 114.816-255.936 256 0 56 18.048 107.904 48.736 150.048l-31.904 95.104 98.4-31.456c40.48 26.816 88.768 42.304 140.832 42.304 141.152 0 255.936-114.848 255.936-256s-114.784-256-255.936-256zm148.96 361.504c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.616-127.456-112.576-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016.16 8.576.288 7.52.32 11.296.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744-3.776 4.352-7.36 7.68-11.136 12.352-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" />
+  </symbol>
+
+  <symbol id="youtube" viewBox="0 0 24 24">
+    <path
+      d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.3.4-1.8.4-3.8.4-5.7s0-3.9-.4-5.7zM9.6 15.3v-6.8l6.3 3.4-6.3 3.4z" />
+  </symbol>
+</svg>
