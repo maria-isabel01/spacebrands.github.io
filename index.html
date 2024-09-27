@@ -73,7 +73,7 @@
 
 
     function createFooter() {
-      const footerHTML = `
+  const footerHTML = `
     <footer class="footer-column">
       <div class="container-footer">
           <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -134,19 +134,51 @@
                   Todos los derechos de autor reservados por Space Brands © 2024
               </a>
           </div>
+         <!-- <div class="language-selector" style="text-align: center; margin-top: 1rem;">
+              <button id="btn-espanol" class="language-button">Español</button>
+              <button id="btn-ingles" class="language-button">Inglés</button>
+          </div> -->
       </div>
     </footer>
-    `;
+  `;
 
-      const footers = document.querySelectorAll('.footer-placeholder');
+  const footers = document.querySelectorAll('.footer-placeholder');
 
-      footers.forEach(footerPlaceholder => {
-        footerPlaceholder.innerHTML = footerHTML;
-      });
-    }
+  footers.forEach(footerPlaceholder => {
+    footerPlaceholder.innerHTML = footerHTML;
+  });
 
-    document.addEventListener('DOMContentLoaded', createFooter);
+  // Manejar el cambio de idioma
+ // document.getElementById('btn-espanol').addEventListener('click', () => cambiarIdioma('es-PE'));
+  //document.getElementById('btn-ingles').addEventListener('click', () => cambiarIdioma('en'));
+}
 
+document.addEventListener('DOMContentLoaded', createFooter);
+
+let currentLanguage = 'es-PE'; // Idioma por defecto
+  
+  function cambiarIdioma(idioma) {
+      currentLanguage = idioma;
+      fetch(`./i18n/${idioma}.json`)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Error al cargar el JSON');
+              }
+              return response.json();
+          })
+          .then(data => {
+              document.getElementById('contact-info').textContent = data.pie_de_pagina.contacto;
+              // Continúa asignando otros textos de tu JSON a los elementos correspondientes.
+          })
+          .catch(error => {
+              console.error('Error al cargar el JSON:', error);
+          });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+      cambiarIdioma(currentLanguage); // Cargar el idioma por defecto
+  });
+  
   </script>
 
   <nav class="side stroke">
@@ -227,7 +259,8 @@
           </a>
         </li>
         <li><a href="#" target="_blank">Contacto</a></li>
-        <li><a href="https://maria-isabel01.github.io/swt_precios_calientes.github.io/" target="_blank">Saber más - Precios Calientes</a></li>
+        <li><a href="https://maria-isabel01.github.io/swt_precios_calientes.github.io/" target="_blank">Saber más -
+            Precios Calientes</a></li>
 
       </ul>
 
@@ -282,15 +315,13 @@
                 Distribuidor líder de las mejores marcas en tecnología y electrodomésticos
               </h1>
               <h5 class="margin-bottom-5 ae-1 center h5-1">
-                Especialistas en el canal offline y online, brindamos grandes experiencias para el cliente en cuanto a
-                precios y productos.
+                Especialistas en canales offline y online, brindamos experiencias excepcionales en precios y productos.
               </h5>
               <div class="margin-bottom-5 ae-3 fromRight relative lora_titulo custom-flex-86 fix-6-12 center">
                 <div class="text-86">
-                  Space Brands es el distribuidor líder de productos de tecnología y electrodomésticos en LATAM, con un
-                  staff de más de 20 años de experiencia en el sector Retail. Conectamos a las marcas más importantes
-                  con los principales retailers y marketplaces, gestionando una cartera de más de 500 productos del
-                  sector electrodomésticos.
+                  Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con más de 20
+                  años de experiencia en Retail. Conectamos marcas líderes con retailers y marketplaces, gestionando una
+                  cartera de más de 500 productos.
                 </div>
               </div>
             </div>
@@ -322,10 +353,9 @@
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Estrategia de ventas agresiva</p>
                     <p class="cropBottom small-0 opacity-8 center pt-3">
-                      En Space Brands unificamos nuestros canales de ventas online y offline para maximizar el impacto
-                      de nuestras marcas. Gracias a nuestra red de distribución y relaciones con más de <strong>30
-                        retailers</strong> y/o
-                      <strong>marketplaces</strong> , aseguramos una penetración efectiva en el mercado.
+                      Unificamos canales de ventas online y offline, maximizando el impacto de nuestras marcas. Nuestra
+                      red de distribución y alianzas con más de 30 retailers y marketplaces aseguran una sólida
+                      presencia en el mercado.
                     </p>
                   </div>
                 </div>
@@ -339,14 +369,10 @@
                   </div>
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Liderazgo en tecnología</p>
-                    <p class="cropBottom small-0 opacity-8 center pt-3">Aliados con las principales marcas de
-                      tecnología,
-                      garantizamos innovación constante en nuestros procesos logísticos y comerciales. Nuestras
-                      plataformas tecnológicas nos permiten gestionar más de 10,000 SKU proyectando a corto mediano
-                      plazo más de <strong>30,000 transacciones mensuales en los próximos año 2025-2026</strong>,
-                      optimizando los tiempos de entrega
-                      y la experiencia
-                      del cliente.</p>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">Colaboramos con líderes tecnológicos,
+                      garantizando innovación constante. Nuestras plataformas gestionan más de 10,000 SKU, proyectando
+                      superar las 30,000 transacciones mensuales en 2025, mejorando tiempos de entrega y experiencia del
+                      cliente.</p>
                   </div>
                 </div>
               </li>
@@ -360,11 +386,8 @@
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Expansión internacional</p>
                     <p class="cropBottom small-0 opacity-8 center pt-3">
-                      Con operaciones consolidadas en <strong>LATAM, preparados </strong> para expandir
-                      nuestras actividades
-                      a nuevos mercados de Latinoamérica. En Bolivia, hemos desarrollado un modelo <strong>OEM</strong>
-                      (fabricante de
-                      equipos originales) que nos posiciona como referentes en el desarrollo de productos a medida.
+                      Con operaciones consolidadas en LATAM, estamos listos para expandirnos en la región. En Bolivia,
+                      nuestro modelo OEM nos posiciona como referentes en productos a medida.
                     </p>
                   </div>
                 </div>
@@ -378,21 +401,15 @@
                   </div>
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Eficiencia financiera</p>
-                    <p class="cropBottom small-0 opacity-8 center pt-3">Implementamos estrategias de inversión
-                      inteligente que nos permiten mantener precios competitivos. Con un crecimiento anual, garantizamos
-                      rentabilidad tanto para nuestros socios comerciales como para nuestros inversores<strong>15% TEA
-                        en
-                        ingresos</strong>
+                    <p class="cropBottom small-0 opacity-8 center pt-3">Aplicamos inversiones inteligentes que
+                      garantizan precios competitivos y un crecimiento anual constante, asegurando rentabilidad del 15%
+                      TEA para socios e inversores.
                     </p>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
-
-
-
-
         </div>
       </div>
       <div class="footer-placeholder"></div>
@@ -410,8 +427,8 @@
             <div class="fix-10-12 toLeft">
               <h1 class="coreTitle margin-bottom-2 ae-1">Servicios Especializados para Nuestros Socios</h1>
               <p class="ae-1 left">
-                Desarrollamos productos de tecnología de punta, específicamente diseñados para el mercado local,
-                trabajando desde el concepto hasta su implementación. </p>
+                Desarrollamos productos tecnológicos de vanguardia, diseñados para el mercado local, desde el concepto
+                hasta la implementación.</p>
             </div>
             <ul class="flex margin-top-10 servicios">
               <li class="col-3-12 margin-bottom-1 left ae-4">
@@ -425,9 +442,9 @@
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Fuerza de Ventas</p>
                     <p class="cropBottom small opacity-8 center pt-3">
-                      Con más de 50 agentes de ventas directos y tercerizados especializados en dropshipping,
-                      desplegamos campañas a nivel nacional que incrementan la exposición de nuestras marcas y maximizan
-                      el retorno de inversión para nuestros socios.
+                      Con más de 50 agentes especializados en ventas directas y dropshipping, lanzamos campañas
+                      nacionales que aumentan la visibilidad de nuestras marcas y maximizan el retorno de inversión para
+                      los socios.
                     </p>
                   </div>
                 </div>
@@ -442,9 +459,9 @@
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Marketing</p>
                     <p class="cropBottom small opacity-8 center pt-3">
-                      Monitoreamos más de 1,000 puntos entre venta on line y offline a nivel nacional, utilizando
-                      herramientas avanzadas para establecer objetivos y controlar la rotación de inventarios,
-                      asegurando que los productos correctos estén en el lugar adecuado y en el momento preciso.
+                      Gestionamos más de 1,000 puntos de venta online y offline, optimizando inventarios con
+                      herramientas avanzadas para garantizar la disponibilidad adecuada de productos en el momento y
+                      lugar precisos.
                     </p>
                   </div>
                 </div>
@@ -459,9 +476,8 @@
                   <div class="text-86">
                     <p class="smaller bold uppercase cropBottom center">Servicio Técnico</p>
                     <p class="cropBottom small opacity-8 center pt-3">
-                      Proporcionamos soporte técnico completo en todas las regiones del país, asegurando un 97% de
-                      satisfacción del cliente gracias a tiempos de respuesta rápidos y eficientes, tanto para
-                      distribuidores como consumidores.
+                      Brindamos soporte técnico en todo el país, con un 97% de satisfacción del cliente, gracias a
+                      tiempos de respuesta rápidos y eficientes para distribuidores y consumidores.
                     </p>
                   </div>
                 </div>
@@ -485,9 +501,8 @@
               <h1 class="coreTitle margin-bottom-2 ae-1">Nuestros Socios Estratégicos</h1>
 
               <p class="cropBottom small opacity-8 center pt-3 pb-4">
-                Space Brands trabaja con más de <strong>30 retailers, supermercados y marketplaces</strong> en el
-                mercado, ofreciendo una
-                cobertura de distribución completa y una presencia consolidada en los principales canales de venta.
+                Space Brands colabora con más de 30 retailers y marketplaces, asegurando una cobertura de distribución
+                integral y una presencia sólida en los principales canales de venta.
               </p>
 
               <div class="serv">
@@ -496,11 +511,6 @@
                   <p class="smaller bold uppercase cropBottom center">Tiendas por departamento
                   </p>
                   <div class="rectangle">
-
-
-
-
-
                     <div class="swiper-container">
                       <div class="swiper-wrapper">
                         <div class="center no-carrusel">
@@ -516,9 +526,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
                 <!-- Sección 3 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Especialistas
@@ -539,17 +546,11 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
-
-
-
                 <!-- Sección 5 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Marketplaces
-
                   </p>
-
                   <div class="rectangle">
                     <div class="swiper-container esp">
                       <div class="swiper-wrapper">
@@ -576,12 +577,10 @@
                   </div>
                 </div>
 
-
                 <!-- Sección 4 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Home center
                   </p>
-
                   <div class="rectangle">
                     <div class="">
                       <div class="">
@@ -595,20 +594,10 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
-
-
-
-
-
                 <!-- Sección 2 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Supermercados
                   </p>
-
                   <div class="rectangle">
                     <div class="swiper-container">
                       <div class="swiper-wrapper">
@@ -624,39 +613,19 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
-
               </div>
-
-
-
-
-
-
               <p class="cropBottom small opacity-8 center pt-3">
                 Nuestra capacidad de distribución garantiza la presencia de nuestros productos en las plataformas online
                 más importantes de la región.
               </p>
-
-
             </div>
-
             <div class="fix-12-12 toLeft">
               <h1 class="coreTitle margin-bottom-2 ae-1 left">Cobertura de Distribución Offline
               </h1>
-
               <p class="cropBottom small opacity-8 center pt-3">
-                A través de una red de distribución que abarca las principales regiones del mercado, Space Brands
-                asegura la entrega eficiente y oportuna de productos a más de <strong> 400 puntos de venta físicos de
-                  nuestros
-                  aliados y/o partners </strong> en todo el territorio peruano. Nuestra estrategia logística nos permite
-                cubrir el
-                <strong>100% del territorio nacional,</strong> con operaciones diseñadas para optimizar tiempos y
-                costos.
+                Space Brands garantiza una distribución eficiente y puntual en más de 400 puntos de venta físicos de nuestros aliados y/o partners en todo el Perú. Nuestra estrategia logística cubre el 100% del territorio nacional, optimizando tiempos y costos para ofrecer un servicio integral.
               </p>
-
-
               <div class="serv pt-3">
                 <!-- Sección 1: Cuadros -->
                 <div class="section">
@@ -669,12 +638,10 @@
                     <p> Importaciones Rubi<br>Yataco<br>EH Inversiones<br>Inche<br>Codisa & El Siglo<br>Lucero A.</p>
                   </div>
                 </div>
-
                 <!-- Sección 2: Imagen -->
                 <div class="image-container">
                   <img src="asset/img/mapa.png" width="400" alt="Mapa">
                 </div>
-
                 <!-- Sección 3: Los últimos dos cuadros -->
                 <div class="section">
                   <div class="cuadro rigth">
@@ -717,7 +684,7 @@
     <div class="background" style="background-image:url('./asset/img/fondo7.jpg');"></div>
   </section>
   <!-- Tecnología -->
-  <section data-cid="slide-30-a8e55e42" class="slide fade-6 " data-title="Tecnologia" data-name="tecnologia">
+  <section data-cid="slide-30-a8e55e42" class="slide fade-6" data-title="Tecnologia" data-name="tecnologia">
     <div class="content">
       <div class="container">
         <div class="wrap tecno">
@@ -761,7 +728,8 @@
                   </div>
                 </div>
 
-
+                <div id="elementos-tecnologia"></div>
+  
               </div>
             </div>
           </div>

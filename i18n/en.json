@@ -1,0 +1,272 @@
+{
+  "pie_de_pagina": {
+    "contacto": "Contact us to be part of our distribution network",
+    "correo": "accounting@spacebrands.shop",
+    "unirse": "Join our group of strategic partners",
+    "derechos": "All copyright reserved by Space Brands © 2024"
+  },
+  "navegacion": {
+    "inicio": "Home",
+    "estrategia": "Strategy",
+    "servicios": "Services",
+    "canales_de_ventas": "Sales Channels",
+    "linea": "LINE",
+    "tecnologia": "Technology"
+  },
+  "barra_lateral": {
+    "catalogo": "Product Catalog",
+    "ubicacion_sur": "Location Lima South",
+    "ubicacion_norte": "Location Lima North - Center",
+    "contacto": "Contact",
+    "saber_mas": "Learn More - Hot Prices"
+  },
+  "inicio": {
+    "titulo": "Leading distributor of the best brands in technology and home appliances",
+    "subtitulo": "Specialists in offline and online channels, providing exceptional experiences in prices and products.",
+    "descripcion": "Space Brands is a leader in the distribution of technology and home appliances in LATAM, with more than 20 years of experience in Retail. We connect leading brands with retailers and marketplaces, managing a portfolio of over 500 products."
+  },
+  "estrategia": {
+    "titulo": "Nuestra Estrategia",
+    "elementos": [
+      {
+        "titulo": "Estrategia de ventas agresiva",
+        "descripcion": "Unificamos canales de ventas online y offline, maximizando el impacto de nuestras marcas. Nuestra red de distribución y alianzas con más de 30 retailers y marketplaces aseguran una sólida presencia en el mercado.",
+        "imagen": {
+          "src": "asset/svg/estrategia/img1.svg",
+          "alt": "Estrategia de ventas agresiva"
+        }
+      },
+      {
+        "titulo": "Liderazgo en tecnología",
+        "descripcion": "Colaboramos con líderes tecnológicos, garantizando innovación constante. Nuestras plataformas gestionan más de 10,000 SKU, proyectando superar las 30,000 transacciones mensuales en 2025, mejorando tiempos de entrega y experiencia del cliente.",
+        "imagen": {
+          "src": "asset/img/liderazgo.png",
+          "alt": "Liderazgo en tecnología"
+        }
+      },
+      {
+        "titulo": "Expansión internacional",
+        "descripcion": "Con operaciones consolidadas en LATAM, estamos listos para expandirnos en la región. En Bolivia, nuestro modelo OEM nos posiciona como referentes en productos a medida.",
+        "imagen": {
+          "src": "asset/img/lugares.png",
+          "alt": "Expansión internacional"
+        }
+      },
+      {
+        "titulo": "Eficiencia financiera",
+        "descripcion": "Aplicamos inversiones inteligentes que garantizan precios competitivos y un crecimiento anual constante, asegurando rentabilidad del 15% TEA para socios e inversores.",
+        "imagen": {
+          "src": "asset/img/moneda.png",
+          "alt": "Eficiencia financiera"
+        }
+      }
+    ]
+  },
+  "servicios": {
+    "titulo": "Specialized Services for Our Partners",
+    "descripcion": "We develop cutting-edge technological products designed for the local market, from concept to implementation.",
+    "elementos": [
+      {
+        "titulo": "Sales Force",
+        "descripcion": "With over 50 agents specialized in direct sales and dropshipping, we launch national campaigns that increase the visibility of our brands and maximize return on investment for partners.",
+        "imagen": {
+          "src": "asset/img/manos.png",
+          "alt": "Sales Force"
+        }
+      },
+      {
+        "titulo": "Marketing",
+        "descripcion": "We manage over 1,000 online and offline sales points, optimizing inventories with advanced tools to ensure the right product availability at the right time and place.",
+        "imagen": {
+          "src": "asset/img/bocina.png",
+          "alt": "Marketing"
+        }
+      },
+      {
+        "titulo": "Technical Service",
+        "descripcion": "We provide technical support nationwide, with a 97% customer satisfaction rate, thanks to fast and efficient response times for distributors and consumers.",
+        "imagen": {
+          "src": "asset/img/call.png",
+          "alt": "Technical Service"
+        }
+      }
+    ]
+  },
+  "socios": {
+    "titulo": "Nuestros Socios Estratégicos",
+    "descripcion": "Space Brands colabora con más de 30 retailers y marketplaces, asegurando una cobertura de distribución integral y una presencia sólida en los principales canales de venta.",
+    "secciones": [
+      {
+        "titulo": "Tiendas por departamento",
+        "imagenes": [
+          {
+            "src": "asset/img/canales/oechsle_2019.png",
+            "alt": "OES",
+            "width": 80
+          },
+          {
+            "src": "asset/svg/canales/Logo_Ripley.svg",
+            "alt": "RIP"
+          },
+          {
+            "src": "asset/img/canales/Estilos.png",
+            "alt": "EVI",
+            "width": 80
+          }
+        ]
+      },
+      {
+        "titulo": "Especialistas",
+        "imagenes": [
+          {
+            "src": "asset/svg/canales/carsa.svg",
+            "alt": "Carsca",
+            "width": 100
+          },
+          {
+            "src": "asset/svg/canales/curacau.svg",
+            "alt": "Curac",
+            "width": 100
+          },
+          {
+            "src": "asset/svg/canales/hiraoka.svg",
+            "alt": "Hira",
+            "width": 100
+          }
+        ]
+      },
+      {
+        "titulo": "Marketplaces",
+        "imagenes": [
+          {
+            "src": "asset/svg/canales/juntos.svg",
+            "alt": "Juns"
+          },
+          {
+            "src": "asset/svg/canales/falabella.svg",
+            "alt": "Faba"
+          },
+          {
+            "src": "asset/img/canales/dinner.jpg",
+            "alt": "Mal"
+          },
+          {
+            "src": "asset/svg/canales/mercado-libre.svg",
+            "alt": "Meerc"
+          },
+          {
+            "src": "asset/img/marcas/marketplace/prec.png",
+            "alt": "Prec"
+          }
+        ]
+      },
+      {
+        "titulo": "Home center",
+        "imagenes": [
+          {
+            "src": "asset/svg/canales/promart.svg",
+            "alt": "Proma"
+          },
+          {
+            "src": "asset/svg/canales/sodimac.svg",
+            "alt": "Sodi"
+          }
+        ]
+      },
+      {
+        "titulo": "Supermercados",
+        "imagenes": [
+          {
+            "src": "asset/svg/canales/cencosud.svg",
+            "alt": "Censo",
+            "width": 100
+          },
+          {
+            "src": "asset/svg/canales/plaza_vea.svg",
+            "alt": "Pla",
+            "width": 100
+          },
+          {
+            "src": "asset/svg/canales/tottus.svg",
+            "alt": "Totus",
+            "width": 100
+          }
+        ]
+      }
+    ],
+    "cobertura": {
+      "titulo": "Cobertura de Distribución Offline",
+      "descripcion": "Space Brands garantiza una distribución eficiente y puntual en más de 400 puntos de venta físicos de nuestros aliados y/o partners en todo el Perú. Nuestra estrategia logística cubre el 100% del territorio nacional, optimizando tiempos y costos para ofrecer un servicio integral.",
+      "regiones": {
+        "norte": [
+          "Chancafe Norte",
+          "Mi Negocio",
+          "E&M Cuba",
+          "Grupo Leoncito"
+        ],
+        "centro": [
+          "Importaciones Rubi",
+          "Yataco",
+          "EH Inversiones",
+          "Inche",
+          "Codisa & El Siglo",
+          "Lucero A."
+        ],
+        "oriente": [
+          "Importaciones Yucra",
+          "Chancafe Oriente",
+          "Importaciones Laban",
+          "La Predilecta",
+          "Oro Verde y Oro Blanco"
+        ],
+        "sur": [
+          "Corporación Rocio",
+          "Mundovisión-Churata",
+          "Kamsa",
+          "A.F Quinto",
+          "Distribuciones Olazábal"
+        ]
+      },
+      "imagenMapa": {
+        "src": "asset/img/mapa.png",
+        "width": 400,
+        "alt": "Mapa"
+      }
+    }
+  },
+  "line": {
+    "titulo": "LINE",
+    "imagen": {
+      "src": "asset/svg/prueba.svg",
+      "alt": "Test Image"
+    },
+    "fondo": {
+      "src": "./asset/img/fondo7.jpg"
+    }
+  },
+  "tecnologia": {
+    "titulo": "Technology and Innovation",
+    "descripcion": "Our focus on technology and innovation allows us to manage over 300,000 annual transactions. With advanced data analysis tools, we optimize inventory, logistics, and sales, enhancing customer experience and maximizing operational efficiency.",
+    "elementos": [
+      {
+        "titulo": "Real-Time Data Analysis",
+        "descripcion": "We make data-driven decisions that improve inventory turnover and optimize product management.",
+        "imagen": {
+          "src": "asset/img/tiempo-real.png",
+          "alt": "Real-Time Data Analysis"
+        }
+      },
+      {
+        "titulo": "Automated Management",
+        "descripcion": "We automate shipments, pricing, and catalogs on major marketplaces, reducing human errors by 90%.",
+        "imagen": {
+          "src": "asset/img/gestion.png",
+          "alt": "Automated Management"
+        }
+      }
+    ],
+    "fondo": {
+      "src": "./asset/img/foto2.avif"
+    }
+  }
+}
