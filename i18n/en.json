@@ -25,43 +25,48 @@
     "subtitulo": "Specialists in offline and online channels, providing exceptional experiences in prices and products.",
     "descripcion": "Space Brands is a leader in the distribution of technology and home appliances in LATAM, with more than 20 years of experience in Retail. We connect leading brands with retailers and marketplaces, managing a portfolio of over 500 products."
   },
+
   "estrategia": {
-    "titulo": "Nuestra Estrategia",
+    "titulo": "Our Strategy",
     "elementos": [
       {
-        "titulo": "Estrategia de ventas agresiva",
-        "descripcion": "Unificamos canales de ventas online y offline, maximizando el impacto de nuestras marcas. Nuestra red de distribución y alianzas con más de 30 retailers y marketplaces aseguran una sólida presencia en el mercado.",
+        "titulo": "Aggressive Sales Strategy",
+        "descripcion": "We unify online and offline sales channels, maximizing the impact of our brands. Our distribution network and alliances with over 30 retailers and marketplaces ensure a strong market presence.",
         "imagen": {
           "src": "asset/svg/estrategia/img1.svg",
-          "alt": "Estrategia de ventas agresiva"
+          "alt": "Aggressive Sales Strategy"
         }
       },
       {
-        "titulo": "Liderazgo en tecnología",
-        "descripcion": "Colaboramos con líderes tecnológicos, garantizando innovación constante. Nuestras plataformas gestionan más de 10,000 SKU, proyectando superar las 30,000 transacciones mensuales en 2025, mejorando tiempos de entrega y experiencia del cliente.",
+        "titulo": "Leadership in Technology",
+        "descripcion": "We collaborate with technology leaders, ensuring constant innovation. Our platforms manage over 10,000 SKUs, projecting to exceed 30,000 monthly transactions by 2025, improving delivery times and customer experience.",
         "imagen": {
           "src": "asset/img/liderazgo.png",
-          "alt": "Liderazgo en tecnología"
+          "alt": "Leadership in Technology"
         }
       },
       {
-        "titulo": "Expansión internacional",
-        "descripcion": "Con operaciones consolidadas en LATAM, estamos listos para expandirnos en la región. En Bolivia, nuestro modelo OEM nos posiciona como referentes en productos a medida.",
+        "titulo": "International Expansion",
+        "descripcion": "With consolidated operations in LATAM, we are ready to expand in the region. In Bolivia, our OEM model positions us as leaders in customized products.",
         "imagen": {
           "src": "asset/img/lugares.png",
-          "alt": "Expansión internacional"
+          "alt": "International Expansion"
         }
       },
       {
-        "titulo": "Eficiencia financiera",
-        "descripcion": "Aplicamos inversiones inteligentes que garantizan precios competitivos y un crecimiento anual constante, asegurando rentabilidad del 15% TEA para socios e inversores.",
+        "titulo": "Financial Efficiency",
+        "descripcion": "We apply smart investments that ensure competitive prices and constant annual growth, guaranteeing a 15% TEA profitability for partners and investors.",
         "imagen": {
           "src": "asset/img/moneda.png",
-          "alt": "Eficiencia financiera"
+          "alt": "Financial Efficiency"
         }
       }
     ]
   },
+
+
+
+
   "servicios": {
     "titulo": "Specialized Services for Our Partners",
     "descripcion": "We develop cutting-edge technological products designed for the local market, from concept to implementation.",

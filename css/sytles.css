@@ -570,3 +570,30 @@ body {
   padding: 1rem;
   text-align: center;
 }
+
+.centers {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente */
+  text-align: center;      /* Asegura que el texto dentro esté centrado */
+  flex-direction: column;  /* Coloca los elementos uno debajo del otro */
+}
+
+.titulo {
+  color: white;            /* Letra blanca para el enlace */
+  text-decoration: none;   /* Eliminar subrayado del enlace */
+}
+
+
+
+.language-button {
+  background: none;        /* Sin estilo de fondo */
+  border: none;            /* Sin bordes */
+  color: white;            /* Letra blanca */
+  cursor: pointer;         /* Mostrar cursor de puntero */
+  padding: 5px 10px;       /* Añadir algo de relleno a los botones */
+}
+
+.language-button:hover {
+  text-decoration: underline;
+}

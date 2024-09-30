@@ -26,57 +26,57 @@
     "descripcion": "Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con más de 20 años de experiencia en Retail. Conectamos marcas líderes con retailers y marketplaces, gestionando una cartera de más de 500 productos."
   },
   "estrategia": {
-    "titulo": "Our Strategy",
+    "titulo": "Nuestra Estrategia",
     "elementos": [
       {
-        "titulo": "Aggressive Sales Strategy",
-        "descripcion": "We unify online and offline sales channels, maximizing the impact of our brands. Our distribution network and alliances with over 30 retailers and marketplaces ensure a strong market presence.",
+        "titulo": "Ventas Agresivas",
+        "descripcion": "Integramos canales online y offline para maximizar el impacto de nuestras marcas, consolidando una red con más de 30 alianzas en retailers y marketplaces.",
         "imagen": {
           "src": "asset/svg/estrategia/img1.svg",
-          "alt": "Aggressive Sales Strategy"
+          "alt": "Ventas Agresivas"
         }
       },
       {
-        "titulo": "Leadership in Technology",
-        "descripcion": "We collaborate with technology leaders, ensuring constant innovation. Our platforms manage over 10,000 SKUs, projecting to exceed 30,000 monthly transactions by 2025, improving delivery times and customer experience.",
+        "titulo": "Liderazgo Tecnológico",
+        "descripcion": "Colaboramos con líderes en tecnología, gestionando más de 500 SKU. Proyectamos 2,500 transacciones mensuales para 2025, optimizando entregas y la experiencia del cliente.",
         "imagen": {
           "src": "asset/img/liderazgo.png",
-          "alt": "Leadership in Technology"
+          "alt": "Liderazgo Tecnológico"
         }
       },
       {
-        "titulo": "International Expansion",
-        "descripcion": "With consolidated operations in LATAM, we are ready to expand in the region. In Bolivia, our OEM model positions us as leaders in customized products.",
+        "titulo": "Expansión Internacional",
+        "descripcion": "Estamos listos para crecer en la región que contamos con un red de contactos. Nuestro modelo de adaptación de productos nos posicionará como líderes en productos OEM a medida.",
         "imagen": {
           "src": "asset/img/lugares.png",
-          "alt": "International Expansion"
+          "alt": "Expansión Internacional"
         }
       },
       {
-        "titulo": "Financial Efficiency",
-        "descripcion": "We apply smart investments that ensure competitive prices and constant annual growth, guaranteeing a 15% TEA profitability for partners and investors.",
+        "titulo": "Eficiencia Financiera",
+        "descripcion": "Aplicamos inversiones estratégicas que aseguran precios competitivos y un crecimiento anual del 15% TEA para nuestros socios e inversores.",
         "imagen": {
           "src": "asset/img/moneda.png",
-          "alt": "Financial Efficiency"
+          "alt": "Eficiencia Financiera"
         }
       }
     ]
   },
   "servicios": {
     "titulo": "Servicios Especializados para Nuestros Socios",
-    "descripcion": "Desarrollamos productos tecnológicos de vanguardia, diseñados para el mercado local, desde el concepto hasta la implementación.",
+    "descripcion": "Desarrollamos productos tecnológicos de alto rendimiento, diseñados y adaptados al mercado local desde el concepto hasta su implementación.",
     "elementos": [
       {
         "titulo": "Fuerza de Ventas",
-        "descripcion": "Con más de 50 agentes especializados en ventas directas y dropshipping, lanzamos campañas nacionales que aumentan la visibilidad de nuestras marcas y maximizan el retorno de inversión para los socios.",
+        "descripcion": "Más de 50 especialistas en ventas y dropshipping indirecto y/o directos que impulsan la visibilidad de nuestras marcas, maximizando la rotación de Skus.",
         "imagen": {
           "src": "asset/img/manos.png",
-          "alt": "Fuerza de Venta"
+          "alt": "Fuerza de Ventas"
         }
       },
       {
         "titulo": "Marketing",
-        "descripcion": "Gestionamos más de 1,000 puntos de venta online y offline, optimizando inventarios con herramientas avanzadas para garantizar la disponibilidad adecuada de productos en el momento y lugar precisos.",
+        "descripcion": "Gestionamos más de 300 puntos de venta con herramientas avanzadas que optimizan la disponibilidad de productos en el momento y lugar adecuados.",
         "imagen": {
           "src": "asset/img/bocina.png",
           "alt": "Marketing"
@@ -84,7 +84,7 @@
       },
       {
         "titulo": "Servicio Técnico",
-        "descripcion": "Brindamos soporte técnico en todo el país, con un 97% de satisfacción del cliente, gracias a tiempos de respuesta rápidos y eficientes para distribuidores y consumidores.",
+        "descripcion": "Brindamos soporte eficiente en todo el país por la red de autorizados, con un 97% de satisfacción de clientes y tiempos de respuesta rápidos.",
         "imagen": {
           "src": "asset/img/call.png",
           "alt": "Servicio Técnico"
@@ -94,7 +94,7 @@
   },
   "socios": {
     "titulo": "Our Strategic Partners",
-    "descripcion": "Space Brands collaborates with over 30 retailers and marketplaces, ensuring comprehensive distribution coverage and a strong presence in key sales channels.",
+    "descripcion": "Colaboramos con más de 30 retailers y/o marketplaces, garantizando una distribución integral y sólida presencia en los principales canales de venta.",
     "secciones": [
       {
         "titulo": "Department Stores",
@@ -195,8 +195,8 @@
       }
     ],
     "cobertura": {
-      "titulo": "Offline Distribution Coverage",
-      "descripcion": "Space Brands ensures efficient and timely distribution in over 400 physical points of sale from our allies and/or partners throughout Peru. Our logistical strategy covers 100% of the national territory, optimizing time and costs to provide comprehensive service.",
+      "titulo": "Distribución Tradicional",
+      "descripcion": "Garantizamos distribución eficiente y puntual en más de 400 puntos de venta físicos a lo largo de todo el Perú, asegurando un servicio integral que optimiza tiempos y costos. Nuestra estrategia logística cubre el 100% del territorio nacional.",
       "regiones": {
         "norte": [
           "Chancafe Norte",

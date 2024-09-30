@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/slides.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
@@ -35,149 +36,7 @@
 
   <!-- Scripts -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Inicializa Swiper
-      var swiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
-        loop: true,
-        autoplay: {
-          delay: 1000,
-        },
-        slidesPerView: 3,
-        spaceBetween: 2,
-      });
-
-      // Manejo de audio
-      var audio = document.getElementById("background-audio");
-      audio.volume = 0.2;
-
-      function playAudio() {
-        var playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            console.log("El audio se está reproduciendo.");
-          }).catch(error => {
-            console.log("Error al reproducir el audio:", error);
-          });
-        }
-      }
-
-      playAudio();
-
-      document.body.addEventListener("click", function () {
-        if (audio.paused) {
-          playAudio();
-        }
-      });
-    });
-
-
-    function createFooter() {
-  const footerHTML = `
-    <footer class="footer-column">
-      <div class="container-footer">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-              <div class="left" style="flex: 1;">
-                  <a class="small corr" id="contact-info" href="#">
-                      Contáctanos para formar parte de nuestra red de distribución
-                  </a><br>
-                  <span id="social-icon">
-                      <svg class="ali">
-                          <use xlink:href="#mail"></use>
-                      </svg>
-                      <span class="small ali corr toLeft">accounting@spacebrands.shop</span>
-                  </span>
-              </div>
-              <a class="titulo" href="#" style="flex: 1; text-align: center;">
-                  Únete a nuestro grupo de socios estratégicos
-              </a>
-              <ul class="social opacity-8 icnsF" id="social-icons" style="flex: 1; display: flex; justify-content: flex-end;">
-                  <li>
-                      <a href="https://www.facebook.com/SpaceBrandsM/" target="_blank" aria-label="Facebook">
-                          <svg>
-                              <use xlink:href="#facebook"></use>
-                          </svg>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.instagram.com/spacebrandss/" target="_blank" aria-label="Instagram">
-                          <svg>
-                              <use xlink:href="#instagram"></use>
-                          </svg>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.linkedin.com/company/space-brands" target="_blank" aria-label="LinkedIn">
-                          <svg>
-                              <use xlink:href="#linkedin"></use>
-                          </svg>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.tiktok.com/@spacebrands" target="_blank" aria-label="Tiktok">
-                          <svg>
-                              <use xlink:href="#twitter"></use>
-                          </svg>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
-                          <svg>
-                              <use xlink:href="#whatsapp"></use>
-                          </svg>
-                      </a>
-                  </li>
-              </ul>
-          </div>
-          <div class="brd" style="text-align: center; margin-top: 1rem;">
-              <a class="titulo" href="#">
-                  Todos los derechos de autor reservados por Space Brands © 2024
-              </a>
-          </div>
-         <!-- <div class="language-selector" style="text-align: center; margin-top: 1rem;">
-              <button id="btn-espanol" class="language-button">Español</button>
-              <button id="btn-ingles" class="language-button">Inglés</button>
-          </div> -->
-      </div>
-    </footer>
-  `;
-
-  const footers = document.querySelectorAll('.footer-placeholder');
-
-  footers.forEach(footerPlaceholder => {
-    footerPlaceholder.innerHTML = footerHTML;
-  });
-
-  // Manejar el cambio de idioma
- // document.getElementById('btn-espanol').addEventListener('click', () => cambiarIdioma('es-PE'));
-  //document.getElementById('btn-ingles').addEventListener('click', () => cambiarIdioma('en'));
-}
-
-document.addEventListener('DOMContentLoaded', createFooter);
-
-let currentLanguage = 'es-PE'; // Idioma por defecto
-  
-  function cambiarIdioma(idioma) {
-      currentLanguage = idioma;
-      fetch(`./i18n/${idioma}.json`)
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Error al cargar el JSON');
-              }
-              return response.json();
-          })
-          .then(data => {
-              document.getElementById('contact-info').textContent = data.pie_de_pagina.contacto;
-              // Continúa asignando otros textos de tu JSON a los elementos correspondientes.
-          })
-          .catch(error => {
-              console.error('Error al cargar el JSON:', error);
-          });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-      cambiarIdioma(currentLanguage); // Cargar el idioma por defecto
-  });
+   
   
   </script>
 
@@ -197,12 +56,12 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
       </div>
       <div class="center">
         <ul class="menu">
-          <li><a id="play-audio" href="#spacebrands">Home</a></li>
-          <li><a href="#estrategia">Estrategia</a></li>
-          <li><a href="#abordar">Servicios</a></li>
-          <li><a href="#canales">Caneles de Ventas</a></li>
-          <li><a href="#line">LINE</a></li>
-          <li><a href="#tecnologia">Tecnologia</a></li>
+          <li><a class="spacebrands" id="play-audio" href="#spacebrands">Home</a></li>
+          <li><a class="estrategia" href="#estrategia">Estrategia</a></li>
+          <li><a class="abordar" href="#abordar">Servicios</a></li>
+          <li><a class="canales" href="#canales">Caneles de Ventas</a></li>
+          <li><a class="line" href="#line">LINE</a></li>
+          <li><a class="tecnologia" href="#tecnologia">Tecnologia</a></li>
         </ul>
       </div>
       <div class="right">
@@ -245,21 +104,21 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
 
       <!-- Menu -->
       <ul class="subMenu small opacity-8 margin-top-3">
-        <li><a href="#" target="_blank">Catalogo de Productos</a></li>
+        <li><a href="#" target="_blank" class="catalogo">Catalogo de Productos</a></li>
         <li>
           <a href="https://www.google.com/maps/search/Jr+Leticia+564,+565+,+455+,+352/@-12.0568804,-77.0331555,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank">
+            target="_blank" class="ubicacion-sur">
             Ubicación Lima Sur
           </a>
         </li>
         <li>
           <a href="https://www.google.com/maps/search/Jr+Bambas+561+%E2%80%93+Almac%C3%A9n+/@-12.0549533,-77.0354182,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank">
+            target="_blank" class="ubicacion-norte">
             Ubicación Lima Norte - Centro
           </a>
         </li>
-        <li><a href="#" target="_blank">Contacto</a></li>
-        <li><a href="https://maria-isabel01.github.io/swt_precios_calientes.github.io/" target="_blank">Saber más -
+        <li><a href="#" target="_blank" class="contacto">Contacto</a></li>
+        <li><a href="https://maria-isabel01.github.io/swt_precios_calientes.github.io/" target="_blank" class="precios">Saber más -
             Precios Calientes</a></li>
 
       </ul>
@@ -305,6 +164,7 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
     </div>
   </nav>
 
+  <!--Home -->
   <section data-cid="slide-10-ef5acf51" class="slide fade-6" data-title="Home" data-name="spacebrands">
     <div class="content">
       <div class="container">
@@ -312,13 +172,16 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
           <div class="fix-12-12 left">
             <div class="fix-10-12">
               <h1 class="margin-bottom-5 ae-1 center">
+                <!-- This text will be replaced -->
                 Distribuidor líder de las mejores marcas en tecnología y electrodomésticos
               </h1>
               <h5 class="margin-bottom-5 ae-1 center h5-1">
+                <!-- This text will be replaced -->
                 Especialistas en canales offline y online, brindamos experiencias excepcionales en precios y productos.
               </h5>
               <div class="margin-bottom-5 ae-3 fromRight relative lora_titulo custom-flex-86 fix-6-12 center">
                 <div class="text-86">
+                  <!-- This text will be replaced -->
                   Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con más de 20
                   años de experiencia en Retail. Conectamos marcas líderes con retailers y marketplaces, gestionando una
                   cartera de más de 500 productos.
@@ -332,7 +195,7 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
     </div>
     <div class="background" style="background-image:url('./asset/img/img_fondo_1.jpeg');"></div>
   </section>
-
+  
   <!-- Estrategia -->
   <section data-cid="slide-30-a8e55e42" class="slide fade-6 " data-title="Estrategia" data-name="estrategia">
     <div class="content">
@@ -526,7 +389,7 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
                     </div>
                   </div>
                 </div>
-                <!-- Sección 3 -->
+                <!-- Sección 2 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Especialistas
                   </p>
@@ -547,7 +410,7 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
                     </div>
                   </div>
                 </div>
-                <!-- Sección 5 -->
+                <!-- Sección 3 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Marketplaces
                   </p>
@@ -570,13 +433,12 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
                           <img src="asset/svg/canales/mercado-libre.svg" alt="Meerc">
                         </div>
                         <div class="swiper-slide center">
-                          <img src="asset/img/marcas/marketplace/prec.png" alt="Prec">
+                          <img src="asset/img/prec.png" alt="Prec">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <!-- Sección 4 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Home center
@@ -594,7 +456,7 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
                     </div>
                   </div>
                 </div>
-                <!-- Sección 2 -->
+                <!-- Sección 5 -->
                 <div class="section">
                   <p class="smaller bold uppercase cropBottom center">Supermercados
                   </p>
@@ -702,31 +564,6 @@ let currentLanguage = 'es-PE'; // Idioma por defecto
 
 
 
-                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
-                  <span class="crop button play white button-86 center">
-                    <img src="asset/img/tiempo-real.png">
-                  </span>
-                  <div class="text-86">
-                    <p class="smaller bold uppercase cropBottom">Análisis de datos en tiempo real</p>
-                    <p class="cropBottom small opacity-8">Gracias a nuestras plataformas tecnológicas, tomamos
-                      decisiones basadas en datos que mejoran la rotación de inventarios y optimizan la gestión de
-                      productos.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done pt-4" data-popup-id="86-1">
-                  <span class="crop button play white button-86 center">
-                    <img src="asset/img/gestion.png">
-                  </span>
-                  <div class="text-86">
-                    <p class="smaller bold uppercase cropBottom">Gestión automatizada</p>
-                    <p class="cropBottom small opacity-8">Con herramientas propias de software, automatizamos la
-                      coordinación de envíos, gestión de precios y catálogo de productos en los principales
-                      marketplaces, reduciendo los errores humanos en un 90%.
-                    </p>
-                  </div>
-                </div>
 
                 <div id="elementos-tecnologia"></div>
   
