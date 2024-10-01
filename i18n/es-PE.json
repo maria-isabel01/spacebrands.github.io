@@ -93,8 +93,10 @@
     ]
   },
   "socios": {
-    "titulo": "Our Strategic Partners",
+    "titulo": "Nuestros Socios Estratégicos",
     "descripcion": "Colaboramos con más de 30 retailers y/o marketplaces, garantizando una distribución integral y sólida presencia en los principales canales de venta.",
+    "descripcion-footer": "Nuestra capacidad de distribución garantiza la presencia de nuestros productos en las plataformas online más importantes de la región.",
+
     "secciones": [
       {
         "titulo": "Department Stores",

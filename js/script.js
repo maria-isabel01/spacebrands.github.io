@@ -50,20 +50,16 @@ function loadLanguageFile(language, callback) {
 
 function applyTranslations(translations) {
 
-
+  // Menu Lateral
   const sidebar = document.querySelector('nav.sidebar');
-
-  // Actualizar los elementos del menú de la barra lateral con las traducciones correspondientes
   sidebar.querySelector('a.catalogo').textContent = translations.barra_lateral.catalogo;
   sidebar.querySelector('a.ubicacion-sur').textContent = translations.barra_lateral.ubicacion_sur;
   sidebar.querySelector('a.ubicacion-norte').textContent = translations.barra_lateral.ubicacion_norte;
-  sidebar.querySelector('a.contacto').textContent = translations.barra_lateral.contacto; // Selección por posición en la lista
+  sidebar.querySelector('a.contacto').textContent = translations.barra_lateral.contacto;
   sidebar.querySelector('a.precios').textContent = translations.barra_lateral.saber_mas;
 
-
-
+  // Menu Vertical
   const menuSection = document.querySelector('.sections.desktop');
-  // Actualizar los elementos del menú con las traducciones correspondientes
   menuSection.querySelector('a.spacebrands').textContent = translations.navegacion.inicio;
   menuSection.querySelector('a.estrategia').textContent = translations.navegacion.estrategia;
   menuSection.querySelector('a.abordar').textContent = translations.navegacion.servicios;
@@ -71,19 +67,16 @@ function applyTranslations(translations) {
   menuSection.querySelector('a.line').textContent = translations.navegacion.linea;
   menuSection.querySelector('a.tecnologia').textContent = translations.navegacion.tecnologia;
 
-
-
-
+  // Footer
   const footers = document.querySelectorAll('.footer-column');
-
   footers.forEach(footer => {
     footer.querySelector('#contact-info').textContent = translations.pie_de_pagina.contacto;
     footer.querySelector('#correo').textContent = translations.pie_de_pagina.correo;
     footer.querySelector('#unirse').textContent = translations.pie_de_pagina.unirse;
-
     footer.querySelector('#derecho').textContent = translations.pie_de_pagina.derechos;
   });
 
+  //Home
   const homeSection = document.querySelector('[data-cid="slide-10-ef5acf51"]');
   if (homeSection) {
     homeSection.querySelector('h1').textContent = translations.inicio.titulo;
@@ -91,18 +84,15 @@ function applyTranslations(translations) {
     homeSection.querySelector('.text-86').textContent = translations.inicio.descripcion;
   }
 
-
-
-  // Traducir la sección Estrategia
+  //Estrategia
   const estrategiaSection = document.querySelector('[data-cid="slide-30-a8e55e42"]');
   if (estrategiaSection) {
     estrategiaSection.querySelector('h1.coreTitle').textContent = translations.estrategia.titulo;
-
     const elementos = translations.estrategia.elementos;
     const listaElementos = estrategiaSection.querySelector('ul.flex');
-    listaElementos.innerHTML = ''; // Limpiar los elementos existentes
+    listaElementos.innerHTML = '';
 
-    // Reemplazar los elementos de estrategia
+    //Cards
     elementos.forEach(elemento => {
       const listItem = document.createElement('li');
       listItem.className = 'col-3-12 margin-bottom-1 left ae-3';
@@ -124,22 +114,17 @@ function applyTranslations(translations) {
   }
 
 
-
-
-
-
-  // Traducir la sección Servicios
+  //Servicios
   const serviciosSection = document.querySelector('[data-cid="slide-161-b914a482"]');
   if (serviciosSection) {
-    // Actualizar el título y la descripción
     serviciosSection.querySelector('h1.coreTitle').textContent = translations.servicios.titulo;
     serviciosSection.querySelector('p.ae-1.left').textContent = translations.servicios.descripcion;
 
     const elementos = translations.servicios.elementos;
     const listaElementos = serviciosSection.querySelector('ul.flex');
-    listaElementos.innerHTML = ''; // Limpiar los elementos existentes
+    listaElementos.innerHTML = '';
 
-    // Reemplazar los elementos de servicios
+    //Cards
     elementos.forEach(elemento => {
       const listItem = document.createElement('li');
       listItem.className = 'col-3-12 margin-bottom-1 left ae-3';
@@ -161,47 +146,36 @@ function applyTranslations(translations) {
   }
 
 
+  //Parnet
   const sociosSection = document.querySelector('[data-cid="slide-01-a330447f"]');
   if (sociosSection) {
-    // Actualizar el título y la descripción
     sociosSection.querySelector('h1.coreTitle').textContent = translations.socios.titulo;
     sociosSection.querySelector('p.cropBottom.small.opacity-8').textContent = translations.socios.descripcion;
+    sociosSection.querySelector('p.cropBottom.small.opacity-8.fowo').textContent = translations.socios.descripcion-footer;
 
     const secciones = translations.socios.secciones;
-
-
-
-    // Limpiar solo los títulos de las secciones existentes
     const servContainer = sociosSection.querySelector('.serv');
-
-    // Asegúrate de que servContainer esté limpio antes de agregar los nuevos títulos
-    // Obtiene todas las secciones existentes
     const existingSections = servContainer.querySelectorAll('.section');
 
-    // Reemplazar los títulos de las secciones de socios
+    //Titulos del carrusel
     secciones.forEach((seccion, index) => {
-      // Verifica si la sección ya existe
       const sectionDiv = existingSections[index];
-
       if (sectionDiv) {
-        // Actualiza el título desde el objeto seccion
         const sectionTitle = sectionDiv.querySelector('p.smaller.bold.uppercase.cropBottom.center');
-
         if (sectionTitle) {
-          sectionTitle.textContent = seccion.titulo; // Actualiza el título
+          sectionTitle.textContent = seccion.titulo;
         }
       }
     });
 
 
-    // Actualizar la cobertura de distribución offline
-    const coberturaTitulo = sociosSection.querySelector('h1.coreTitle.left'); // Asumiendo que es el segundo título
+    //Mapa
+    const coberturaTitulo = sociosSection.querySelector('h1.coreTitle.left'); 
     coberturaTitulo.textContent = translations.socios.cobertura.titulo;
 
-    const coberturaDescripcion = sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3'); // Asumiendo que es el segundo párrafo
+    const coberturaDescripcion = sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3');
     coberturaDescripcion.textContent = translations.socios.cobertura.descripcion;
 
-    // Limpiar y añadir regiones
     const regionesDiv = document.createElement('div');
     const regiones = translations.socios.cobertura.regiones;
 
@@ -210,29 +184,19 @@ function applyTranslations(translations) {
       cuadroDiv.className = 'cuadro left pt-5';
 
       const regionTitle = document.createElement('h5');
-      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); // Capitalizar la primera letra
+      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); 
       cuadroDiv.appendChild(regionTitle);
 
       const regionPartners = document.createElement('p');
-      regionPartners.innerHTML = regiones[region].join('<br>'); // Unir los socios con saltos de línea
+      regionPartners.innerHTML = regiones[region].join('<br>'); 
       cuadroDiv.appendChild(regionPartners);
 
       regionesDiv.appendChild(cuadroDiv);
     });
 
-    // Añadir imagen del mapa
-    const imageContainer = document.createElement('div');
-    imageContainer.className = 'image-container';
 
-    const mapImg = document.createElement('img');
-    mapImg.src = translations.socios.cobertura.imagenMapa.src;
-    mapImg.width = translations.socios.cobertura.imagenMapa.width;
-    mapImg.alt = translations.socios.cobertura.imagenMapa.alt;
 
-    imageContainer.appendChild(mapImg);
-
-    // Añadir el contenedor de imágenes y las regiones al sociosSection
-    sociosSection.appendChild(imageContainer);
+    // Añadir
     sociosSection.appendChild(regionesDiv);
   }
 
