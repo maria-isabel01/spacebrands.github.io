@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
 // Cargar el archivo JSON con las traducciones
 function loadLanguageFile(language, callback) {
   const xobj = new XMLHttpRequest();
@@ -113,7 +115,6 @@ function applyTranslations(translations) {
     });
   }
 
-
   //Servicios
   const serviciosSection = document.querySelector('[data-cid="slide-161-b914a482"]');
   if (serviciosSection) {
@@ -145,82 +146,103 @@ function applyTranslations(translations) {
     });
   }
 
-
   //Parnet
   const sociosSection = document.querySelector('[data-cid="slide-01-a330447f"]');
   if (sociosSection) {
+
     sociosSection.querySelector('h1.coreTitle').textContent = translations.socios.titulo;
     sociosSection.querySelector('p.cropBottom.small.opacity-8').textContent = translations.socios.descripcion;
-    sociosSection.querySelector('p.cropBottom.small.opacity-8.fowo').textContent = translations.socios.descripcion-footer;
 
     const secciones = translations.socios.secciones;
     const servContainer = sociosSection.querySelector('.serv');
     const existingSections = servContainer.querySelectorAll('.section');
 
-    //Titulos del carrusel
     secciones.forEach((seccion, index) => {
       const sectionDiv = existingSections[index];
       if (sectionDiv) {
         const sectionTitle = sectionDiv.querySelector('p.smaller.bold.uppercase.cropBottom.center');
         if (sectionTitle) {
-          sectionTitle.textContent = seccion.titulo;
+          sectionTitle.textContent = seccion.titulo; 
         }
       }
     });
 
 
-    //Mapa
-    const coberturaTitulo = sociosSection.querySelector('h1.coreTitle.left'); 
+    // Actualizar la cobertura de distribución offline
+    const coberturaTitulo = sociosSection.querySelector('h1.coreTitle.left');
     coberturaTitulo.textContent = translations.socios.cobertura.titulo;
 
-    const coberturaDescripcion = sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3');
+    const coberturaDescripcion = sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3.descp');
     coberturaDescripcion.textContent = translations.socios.cobertura.descripcion;
+    const servSection = sociosSection.querySelector('.serv.pt-3.cards-mapa');
 
-    const regionesDiv = document.createElement('div');
+    console.log('Región:', translations.socios.cobertura.regiones);
+    servSection.innerHTML = '';
+
+    const leftDiv = document.createElement('div');
+    leftDiv.className = 'section-left';
+    const rightDiv = document.createElement('div');
+    rightDiv.className = 'section-right';
+  
     const regiones = translations.socios.cobertura.regiones;
-
-    Object.keys(regiones).forEach(region => {
+  
+    ['norte', 'centro'].forEach(region => {
       const cuadroDiv = document.createElement('div');
       cuadroDiv.className = 'cuadro left pt-5';
-
+      
       const regionTitle = document.createElement('h5');
       regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); 
       cuadroDiv.appendChild(regionTitle);
-
+      
       const regionPartners = document.createElement('p');
-      regionPartners.innerHTML = regiones[region].join('<br>'); 
+      regionPartners.innerHTML = regiones[region].join('<br>');
       cuadroDiv.appendChild(regionPartners);
-
-      regionesDiv.appendChild(cuadroDiv);
+      
+      leftDiv.appendChild(cuadroDiv);
     });
-
-
-
-    // Añadir
-    sociosSection.appendChild(regionesDiv);
+  
+    ['oriente', 'sur'].forEach(region => {
+      const cuadroDiv = document.createElement('div');
+      cuadroDiv.className = 'cuadro right pt-5'; 
+      
+      const regionTitle = document.createElement('h5');
+      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); 
+      cuadroDiv.appendChild(regionTitle);
+      
+      const regionPartners = document.createElement('p');
+      regionPartners.innerHTML = regiones[region].join('<br>');
+      cuadroDiv.appendChild(regionPartners);
+      
+      rightDiv.appendChild(cuadroDiv);
+    });
+  
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'image-container center';  
+    const mapImage = document.createElement('img');
+    mapImage.src = translations.socios.cobertura.imagenMapa.src;
+    mapImage.width = translations.socios.cobertura.imagenMapa.width;
+    mapImage.alt = translations.socios.cobertura.imagenMapa.alt;
+    imageContainer.appendChild(mapImage);
+  
+    servSection.appendChild(leftDiv);
+    servSection.appendChild(imageContainer);
+    servSection.appendChild(rightDiv);
   }
 
-
-
-
-
-  // Traducir la sección Tecnología
+  //Tecnología
   const tecnologiaSection = document.querySelector('[data-name="tecnologia"]');
 
   if (tecnologiaSection) {
-    // Actualizar título y descripción
     const { titulo, descripcion, elementos, fondo } = translations.tecnologia;
 
     tecnologiaSection.querySelector('h1').textContent = titulo;
     tecnologiaSection.querySelector('p').textContent = descripcion;
 
-    // Limpiar elementos existentes y agregar nuevos
     const elementosContenedor = tecnologiaSection.querySelector('#elementos-tecnologia');
-    elementosContenedor.innerHTML = ''; // Limpiar elementos existentes
-
+    elementosContenedor.innerHTML = '';
     elementos.forEach(elemento => {
       elementosContenedor.innerHTML += `
-      <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done" data-popup-id="86-1">
+      <div class="popupTrigger ae-3 fromRight relative custom-flex-86 done pt-3-1" data-popup-id="86-1">
         <span class="crop button play white button-86 center">
           <img src="${elemento.imagen.src}" alt="${elemento.imagen.alt}">
         </span>
@@ -231,19 +253,11 @@ function applyTranslations(translations) {
       </div>
     `;
     });
-
   }
-
-
 }
 
 
-
-
-
-
-
-// Cambiar el idioma de la página y aplicar las traducciones a todos los footers
+//Footers
 function cambiarIdioma(language) {
   loadLanguageFile(language, function (translations) {
     applyTranslations(translations);
@@ -252,80 +266,66 @@ function cambiarIdioma(language) {
 
 function createFooter() {
   const footerHTML = `
-    <footer class="footer-column">
-      <div class="container-footer">
+   <footer class="footer-column">
+    <div class="container-footer">
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div class="left" style="flex: 1;">
-            <a class="small corr" id="contact-info" href="#"></a><br>
-            <span id="social-icon">
-              <svg class="ali"><use xlink:href="#mail"></use></svg>
-              <span id="correo" class="small ali corr toLeft"></span>
-            </span>
-          </div>
-
-
-     <div class="centers" style="flex: 1;">
-  <a class="titulo" id="unirse" href="#"></a>
-  <div class="language-selector">
-    <button class="btn-espanol language-button">Español</button>
-    <button class="btn-ingles language-button">Inglés</button>
-  </div>
-</div>
-
-
-          
-   <ul class="social opacity-8 icnsF" id="social-icons" style="flex: 1; display: flex; justify-content: flex-end;">
-                      <li>
-                          <a href="https://www.facebook.com/SpaceBrandsM/" target="_blank" aria-label="Facebook">
-                              <svg>
-                                  <use xlink:href="#facebook"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.instagram.com/spacebrandss/" target="_blank" aria-label="Instagram">
-                              <svg>
-                                  <use xlink:href="#instagram"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.linkedin.com/company/space-brands" target="_blank" aria-label="LinkedIn">
-                              <svg>
-                                  <use xlink:href="#linkedin"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.tiktok.com/@spacebrands" target="_blank" aria-label="Tiktok">
-                              <svg>
-                                  <use xlink:href="#twitter"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
-                              <svg>
-                                  <use xlink:href="#whatsapp"></use>
-                              </svg>
-                          </a>
-                      </li>
-                  </ul>
+            <div class="left" style="flex: 1;">
+                <a class="small corr" id="contact-info" href="#"></a><br>
+                <span id="social-icon">
+                    <svg class="ali">
+                        <use xlink:href="#mail"></use>
+                    </svg>
+                    <span id="correo" class="small ali corr toLeft"></span>
+                </span>
+            </div>
+            <div class="centers" style="flex: 1;">
+                <a class="titulo" id="unirse" href="#"></a>
+                <div class="language-selector">
+                    <button class="btn-espanol language-button">Español</button>
+                    <button class="btn-ingles language-button">Inglés</button>
+                </div>
+            </div>
+            <ul class="social opacity-8 icnsF" id="social-icons"
+                style="flex: 1; display: flex; justify-content: flex-end;">
+                <li>
+                    <a href="https://www.facebook.com/SpaceBrandsM/" target="_blank" aria-label="Facebook">
+                        <svg>
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/spacebrandss/" target="_blank" aria-label="Instagram">
+                        <svg>
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/space-brands" target="_blank" aria-label="LinkedIn">
+                        <svg>
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@spacebrands" target="_blank" aria-label="Tiktok">
+                      <img src="asset/svg/tiktok.svg" class="img-icon">
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="brd" style="text-align: center; margin-top: 1rem;">
-          <a class="titulo" href="#" id="derecho"></a>
+            <a class="titulo" href="#" id="derecho"></a>
         </div>
-
-      </div>
-    </footer>
+    </div>
+</footer>
   `;
 
   const footers = document.querySelectorAll('.footer-placeholder');
 
   footers.forEach(footerPlaceholder => {
     footerPlaceholder.innerHTML = footerHTML;
-
-    // Añadir eventos a los botones de idioma para cada footer dinámicamente
     footerPlaceholder.querySelector('.btn-espanol').addEventListener('click', () => cambiarIdioma('es-PE'));
     footerPlaceholder.querySelector('.btn-ingles').addEventListener('click', () => cambiarIdioma('en'));
   });

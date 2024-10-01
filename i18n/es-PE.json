@@ -99,105 +99,23 @@
 
     "secciones": [
       {
-        "titulo": "Department Stores",
-        "imagenes": [
-          {
-            "src": "asset/img/canales/oechsle_2019.png",
-            "alt": "OES",
-            "width": 80
-          },
-          {
-            "src": "asset/svg/canales/Logo_Ripley.svg",
-            "alt": "RIP"
-          },
-          {
-            "src": "asset/img/canales/Estilos.png",
-            "alt": "EVI",
-            "width": 80
-          }
-        ]
+        "titulo": "Tiendas por Departamento"
       },
       {
-        "titulo": "Specialists",
-        "imagenes": [
-          {
-            "src": "asset/svg/canales/carsa.svg",
-            "alt": "Carsca",
-            "width": 100
-          },
-          {
-            "src": "asset/svg/canales/curacau.svg",
-            "alt": "Curac",
-            "width": 100
-          },
-          {
-            "src": "asset/svg/canales/hiraoka.svg",
-            "alt": "Hira",
-            "width": 100
-          }
-        ]
+        "titulo": "Especialistas"
       },
       {
-        "titulo": "Marketplaces",
-        "imagenes": [
-          {
-            "src": "asset/svg/canales/juntos.svg",
-            "alt": "Juns"
-          },
-          {
-            "src": "asset/svg/canales/falabella.svg",
-            "alt": "Faba"
-          },
-          {
-            "src": "asset/img/canales/dinner.jpg",
-            "alt": "Mal"
-          },
-          {
-            "src": "asset/svg/canales/mercado-libre.svg",
-            "alt": "Meerc"
-          },
-          {
-            "src": "asset/img/marcas/marketplace/prec.png",
-            "alt": "Prec"
-          }
-        ]
+        "titulo": "Mercados en Línea"
       },
       {
-        "titulo": "Home Center",
-        "imagenes": [
-          {
-            "src": "asset/svg/canales/promart.svg",
-            "alt": "Proma"
-          },
-          {
-            "src": "asset/svg/canales/sodimac.svg",
-            "alt": "Sodi"
-          }
-        ]
+        "titulo": "Centros del Hogar"
       },
       {
-        "titulo": "Supermarkets",
-        "imagenes": [
-          {
-            "src": "asset/svg/canales/cencosud.svg",
-            "alt": "Censo",
-            "width": 100
-          },
-          {
-            "src": "asset/svg/canales/plaza_vea.svg",
-            "alt": "Pla",
-            "width": 100
-          },
-          {
-            "src": "asset/svg/canales/tottus.svg",
-            "alt": "Totus",
-            "width": 100
-          }
-        ]
-      }
+        "titulo": "Supermercados"
+      }      
     ],
     "cobertura": {
-      "titulo": "Distribución Tradicional",
+      "titulo": "Cobertura de Distribución Offline",
       "descripcion": "Garantizamos distribución eficiente y puntual en más de 400 puntos de venta físicos a lo largo de todo el Perú, asegurando un servicio integral que optimiza tiempos y costos. Nuestra estrategia logística cubre el 100% del territorio nacional.",
       "regiones": {
         "norte": [
@@ -207,24 +125,19 @@
           "Grupo Leoncito"
         ],
         "centro": [
-          "Importaciones Rubi",
           "Yataco",
           "EH Inversiones",
           "Inche",
-          "Codisa & El Siglo",
-          "Lucero A."
+          "Codisa & El Siglo"
         ],
         "oriente": [
           "Importaciones Yucra",
           "Chancafe Oriente",
-          "Importaciones Laban",
-          "La Predilecta",
-          "Oro Verde and Oro Blanco"
+          "Importaciones Laban"
         ],
         "sur": [
           "Corporación Rocio",
           "Mundovisión-Churata",
-          "Kamsa",
           "A.F Quinto",
           "Distribuciones Olazábal"
         ]
@@ -238,17 +151,66 @@
   },
   "line": {
     "titulo": "LINE",
-    "imagen": {
-      "src": "asset/svg/prueba.svg",
-      "alt": "Imagen de prueba"
-    },
-    "fondo": {
-      "src": "./asset/img/fondo7.jpg"
-    }
+      "cards": [
+        {
+          "title": "2024.Q4",
+          "header": "Mejoras en la gestión de Marketplace",
+          "content": "Implementación de una nueva aplicación para optimizar la gestión de catálogos en marketplaces como Ripley, Falabella y Mercado Libre, con la plataforma Precios Calientes.",
+          "footer": "Objetivo: Incrementar en un 30% las ventas online"
+        },
+        {
+          "title": "2025.Q1",
+          "header": "Expansión de la Red de Distribución Offline",
+          "content": "Incorporación de nuevos distribuidores regionales en el norte y centro del país.",
+          "footer": "Objetivo: Cubrir el 95% del territorio nacional"
+        },
+        {
+          "title": "2025.Q2",
+          "header": "Lanzamiento de Precios Calientes LATAM",
+          "content": "Expansión de la plataforma Precios Calientes a Bolivia.",
+          "footer": "Objetivo: Alcanzar 10,000 usuarios activos"
+        },
+        {
+          "title": "2025.Q3",
+          "header": "Optimización de Logística Inteligente",
+          "content": "Implementación de una solución logística avanzada basada en datos para mejorar tiempos de entrega y reducir costos en un 20%.",
+          "footer": "Objetivo: Logística en tiempo real en Perú y Bolivia"
+        },
+        {
+          "title": "2025.Q4",
+          "header": "Desarrollo de Productos OEM",
+          "content": "Creación de productos personalizados bajo la marca Space Brands en alianza con fabricantes OEM.",
+          "footer": "Objetivo: Introducir 5 nuevos productos"
+        },
+        {
+          "title": "2026.Q1",
+          "header": "Fortalecimiento del Canal Retail",
+          "content": "Expansión de la presencia de productos en tiendas físicas en departamentales y supermercados en Perú y Bolivia.",
+          "footer": "Objetivo: Incrementar en un 20% la participación offline"
+        },
+        {
+          "title": "2026.Q3",
+          "header": "Integración Total de Operaciones Online y Offline",
+          "content": "Unificación de la plataforma de gestión para controlar en tiempo real ventas en línea y físicas.",
+          "footer": "Objetivo: Mejorar la eficiencia operativa en un 30%"
+        },
+        {
+          "title": "2027.Q1",
+          "header": "Plataforma E-commerce Propia por marcas",
+          "content": "Lanzamiento de una plataforma de e-commerce por ecosistema de marcas para la venta directa de productos representados por Space Brands.",
+          "footer": "Objetivo: Alcanzar 1 millón de visitas mensuales"
+        },
+        {
+          "title": "2027.Q3",
+          "header": "Expansión a Nuevos Mercados Latinoamericanos",
+          "content": "Ingreso a Colombia y Chile con una oferta de distribución integral.",
+          "footer": "Objetivo: Crecimiento anual del 30% en ventas"
+        }
+      ]
   },
   "tecnologia": {
     "titulo": "Tecnología e Innovación",
-    "descripcion": "Nuestro enfoque en tecnología e innovación nos permite gestionar más de 300,000 transacciones anuales. Con herramientas avanzadas de análisis de datos, optimizamos inventarios, logística y ventas, mejorando la experiencia del cliente y maximizando la eficiencia operativa.",
+    "descripcion": "Nuestro enfoque en tecnología e innovación nos permite gestionar hasta más de 60,000 transacciones anuales en el corto plazo en el 2026 pensamos redoblar la capacidad instalada. Con herramientas avanzadas de análisis de datos, optimizamos inventarios, logística y ventas, mejorando la experiencia del cliente y maximizando la eficiencia operativa.",
     "elementos": [
       {
         "titulo": "Análisis de datos en tiempo real",
@@ -266,9 +228,6 @@
           "alt": "Gestión automatizada"
         }
       }
-    ],
-    "fondo": {
-      "src": "./asset/img/foto2.avif"
-    }
+    ]
   }
 }
