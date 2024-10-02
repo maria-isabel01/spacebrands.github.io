@@ -229,6 +229,49 @@ function applyTranslations(translations) {
     servSection.appendChild(rightDiv);
   }
 
+    // Actualizar las tarjetas
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.innerHTML = ''; // Limpiar las tarjetas existentes
+  
+    translations.line.cards.forEach((data) => {
+      const cardColor = getRandomColor();
+  
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.border = `1px solid ${cardColor}`;
+  
+      card.innerHTML = `
+        <div class="card-header" style="background-color: ${cardColor};">${data.title}</div>
+        <div class="card-body">
+          <h3>${data.header}</h3>
+          <p>${data.content}</p>
+        </div>
+        <div class="card-footer" style="background-color: ${cardColor};">${data.footer}</div>
+      `;
+      cardContainer.appendChild(card);
+    });
+  
+  
+  // Función para generar un color aleatorio
+  function getRandomColor() {
+    const colors = ['rgb(23, 43, 77)'];
+    return colors[0]; // Selecciona el primer color
+  }
+  
+  // Funcionalidad de los botones de navegación
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const scrollAmount = 300; // Cantidad de desplazamiento por clic
+
+prevBtn.addEventListener('click', () => {
+  document.getElementById('card-container').scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+  document.getElementById('card-container').scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+
   //Tecnología
   const tecnologiaSection = document.querySelector('[data-name="tecnologia"]');
 
@@ -315,7 +358,7 @@ function createFooter() {
                 </li>
             </ul>
         </div>
-        <div class="brd" style="text-align: center; margin-top: 1rem;">
+        <div class="brd" style="text-align: center;">
             <a class="titulo" href="#" id="derecho"></a>
         </div>
     </div>
