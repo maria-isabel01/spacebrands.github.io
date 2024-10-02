@@ -162,7 +162,7 @@ function applyTranslations(translations) {
       if (sectionDiv) {
         const sectionTitle = sectionDiv.querySelector('p.smaller.bold.uppercase.cropBottom.center');
         if (sectionTitle) {
-          sectionTitle.textContent = seccion.titulo; 
+          sectionTitle.textContent = seccion.titulo;
         }
       }
     });
@@ -183,64 +183,64 @@ function applyTranslations(translations) {
     leftDiv.className = 'section-left';
     const rightDiv = document.createElement('div');
     rightDiv.className = 'section-right';
-  
+
     const regiones = translations.socios.cobertura.regiones;
-  
+
     ['norte', 'centro'].forEach(region => {
       const cuadroDiv = document.createElement('div');
       cuadroDiv.className = 'cuadro left pt-5';
-      
+
       const regionTitle = document.createElement('h5');
-      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); 
+      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1);
       cuadroDiv.appendChild(regionTitle);
-      
+
       const regionPartners = document.createElement('p');
       regionPartners.innerHTML = regiones[region].join('<br>');
       cuadroDiv.appendChild(regionPartners);
-      
+
       leftDiv.appendChild(cuadroDiv);
     });
-  
+
     ['oriente', 'sur'].forEach(region => {
       const cuadroDiv = document.createElement('div');
-      cuadroDiv.className = 'cuadro right pt-5'; 
-      
+      cuadroDiv.className = 'cuadro right pt-5';
+
       const regionTitle = document.createElement('h5');
-      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1); 
+      regionTitle.textContent = region.charAt(0).toUpperCase() + region.slice(1);
       cuadroDiv.appendChild(regionTitle);
-      
+
       const regionPartners = document.createElement('p');
       regionPartners.innerHTML = regiones[region].join('<br>');
       cuadroDiv.appendChild(regionPartners);
-      
+
       rightDiv.appendChild(cuadroDiv);
     });
-  
+
     const imageContainer = document.createElement('div');
-    imageContainer.className = 'image-container center';  
+    imageContainer.className = 'image-container center';
     const mapImage = document.createElement('img');
     mapImage.src = translations.socios.cobertura.imagenMapa.src;
     mapImage.width = translations.socios.cobertura.imagenMapa.width;
     mapImage.alt = translations.socios.cobertura.imagenMapa.alt;
     imageContainer.appendChild(mapImage);
-  
+
     servSection.appendChild(leftDiv);
     servSection.appendChild(imageContainer);
     servSection.appendChild(rightDiv);
   }
 
-    // Actualizar las tarjetas
-    const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML = ''; // Limpiar las tarjetas existentes
-  
-    translations.line.cards.forEach((data) => {
-      const cardColor = getRandomColor();
-  
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.style.border = `1px solid ${cardColor}`;
-  
-      card.innerHTML = `
+  //Line
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.innerHTML = '';
+
+  translations.line.cards.forEach((data) => {
+    const cardColor = getRandomColor();
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.border = `1px solid ${cardColor}`;
+
+    card.innerHTML = `
         <div class="card-header" style="background-color: ${cardColor};">${data.title}</div>
         <div class="card-body">
           <h3>${data.header}</h3>
@@ -248,28 +248,26 @@ function applyTranslations(translations) {
         </div>
         <div class="card-footer" style="background-color: ${cardColor};">${data.footer}</div>
       `;
-      cardContainer.appendChild(card);
-    });
-  
-  
-  // Función para generar un color aleatorio
+    cardContainer.appendChild(card);
+  });
+
+
   function getRandomColor() {
     const colors = ['rgb(23, 43, 77)'];
-    return colors[0]; // Selecciona el primer color
+    return colors;
   }
-  
-  // Funcionalidad de los botones de navegación
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const scrollAmount = 300; // Cantidad de desplazamiento por clic
 
-prevBtn.addEventListener('click', () => {
-  document.getElementById('card-container').scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const scrollAmount = 300;
 
-nextBtn.addEventListener('click', () => {
-  document.getElementById('card-container').scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
+  prevBtn.addEventListener('click', () => {
+    document.getElementById('card-container').scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    document.getElementById('card-container').scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
 
 
   //Tecnología
