@@ -39,7 +39,7 @@
 .rectangle {
   padding: 0.5rem !important;
   margin: 1rem;
-  width: 150px;
+  width: 180px;
   height: 330px;
   position: relative;
   overflow: hidden;
@@ -93,7 +93,7 @@
 }
 
 .small-0 {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .brd {
@@ -664,4 +664,9 @@ body {
   .nav-button:focus {
     outline: none;
   }
+}
+
+.sin-borde{
+  padding: 0px !important;
+  margin: 0px !important;
 }

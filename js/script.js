@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Inicializa Swiper
   var swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 1200,
     },
-    slidesPerView: 3,
-    spaceBetween: 2,
+    slidesPerView: 4,
+    spaceBetween: 1,
   });
 
   // Manejo de audio
@@ -33,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-
 
 
 // Cargar el archivo JSON con las traducciones
@@ -167,6 +164,7 @@ function applyTranslations(translations) {
       }
     });
 
+    sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3.fowo').textContent = translations.socios.descripcion_footer;
 
     // Actualizar la cobertura de distribución offline
     const coberturaTitulo = sociosSection.querySelector('h1.coreTitle.left');
@@ -175,8 +173,6 @@ function applyTranslations(translations) {
     const coberturaDescripcion = sociosSection.querySelector('p.cropBottom.small.opacity-8.pt-3.descp');
     coberturaDescripcion.textContent = translations.socios.cobertura.descripcion;
     const servSection = sociosSection.querySelector('.serv.pt-3.cards-mapa');
-
-    console.log('Región:', translations.socios.cobertura.regiones);
     servSection.innerHTML = '';
 
     const leftDiv = document.createElement('div');

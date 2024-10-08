@@ -10,7 +10,7 @@
     "estrategia": "Estrategia",
     "servicios": "Servicios",
     "canales_de_ventas": "Canales de Ventas",
-    "linea": "LINE",
+    "linea": "ROADMAP",
     "tecnologia": "Tecnología"
   },
   "barra_lateral": {
@@ -23,14 +23,14 @@
   "inicio": {
     "titulo": "Distribuidor líder de las mejores marcas en tecnología y electrodomésticos",
     "subtitulo": "Especialistas en canales offline y online, brindamos experiencias excepcionales en precios y productos.",
-    "descripcion": "Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con más de 20 años de experiencia en Retail. Conectamos marcas líderes con retailers y marketplaces, gestionando una cartera de más de 500 productos."
+    "descripcion": "Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con un staff de 10 años de experiencia en Retail. Conectamos marcas líderes con retailers y marketplaces, gestionando una cartera de más de 500 productos."
   },
   "estrategia": {
     "titulo": "Nuestra Estrategia",
     "elementos": [
       {
         "titulo": "Ventas Agresivas",
-        "descripcion": "Integramos canales online y offline para maximizar el impacto de nuestras marcas, consolidando una red con más de 30 alianzas en retailers y marketplaces.",
+        "descripcion": "Integramos canales online y offline para maximizar el impacto de nuestras marcas, consolidando una red con más de 15 alianzas en retailers y marketplaces.",
         "imagen": {
           "src": "asset/svg/estrategia/img1.svg",
           "alt": "Ventas Agresivas"
@@ -46,7 +46,7 @@
       },
       {
         "titulo": "Expansión Internacional",
-        "descripcion": "Estamos listos para crecer en la región que contamos con un red de contactos. Nuestro modelo de adaptación de productos nos posicionará como líderes en productos OEM a medida.",
+        "descripcion": "Estamos preparados para expandirnos en la región, respaldados por una sólida red de contactos. Nuestro modelo de adaptación de productos nos posiciona como líderes en el desarrollo de soluciones OEM personalizadas.",
         "imagen": {
           "src": "asset/img/lugares.png",
           "alt": "Expansión Internacional"
@@ -68,7 +68,7 @@
     "elementos": [
       {
         "titulo": "Fuerza de Ventas",
-        "descripcion": "Más de 50 especialistas en ventas y dropshipping indirecto y/o directos que impulsan la visibilidad de nuestras marcas, maximizando la rotación de Skus.",
+        "descripcion": "50 especialistas en ventas y dropshipping indirecto y/o directos que impulsan la visibilidad de nuestras marcas, maximizando la rotación de Skus.",
         "imagen": {
           "src": "asset/img/manos.png",
           "alt": "Fuerza de Ventas"
@@ -76,7 +76,7 @@
       },
       {
         "titulo": "Marketing",
-        "descripcion": "Gestionamos más de 300 puntos de venta con herramientas avanzadas que optimizan la disponibilidad de productos en el momento y lugar adecuados.",
+        "descripcion": "Gestionamos más de 300 puntos de venta con herramientas avanzadas. Nuestras campañas agresivas de ads aumentan el tráfico y las conversiones, optimizando el posicionamiento de marca y la rotación de mercadería.",
         "imagen": {
           "src": "asset/img/bocina.png",
           "alt": "Marketing"
@@ -84,7 +84,7 @@
       },
       {
         "titulo": "Servicio Técnico",
-        "descripcion": "Brindamos soporte eficiente en todo el país por la red de autorizados, con un 97% de satisfacción de clientes y tiempos de respuesta rápidos.",
+        "descripcion": "Ofrecemos un soporte técnico eficiente en todo el país a través de nuestra red de profesionales autorizados, logrando un 97% de satisfacción entre nuestros clientes y asegurando tiempos de respuesta rápidos.",
         "imagen": {
           "src": "asset/img/call.png",
           "alt": "Servicio Técnico"
@@ -95,27 +95,27 @@
   "socios": {
     "titulo": "Nuestros Socios Estratégicos",
     "descripcion": "Colaboramos con más de 30 retailers y/o marketplaces, garantizando una distribución integral y sólida presencia en los principales canales de venta.",
-    "descripcion-footer": "Nuestra capacidad de distribución garantiza la presencia de nuestros productos en las plataformas online más importantes de la región.",
+    "descripcion_footer": "Nuestra capacidad de distribución garantiza la presencia de nuestros productos en las plataformas online más importantes de la región.",
     "secciones": [
       {
         "titulo": "Tiendas por Departamento"
       },
       {
-        "titulo": "Especialistas"
+        "titulo": "Supermercados"
       },
       {
-        "titulo": "Mercados en Línea"
+        "titulo": "Marketplaces"
       },
       {
         "titulo": "Centros del Hogar"
       },
       {
-        "titulo": "Supermercados"
+        "titulo": "Especialistas"
       }
     ],
     "cobertura": {
       "titulo": "Cobertura de Distribución Offline",
-      "descripcion": "Garantizamos distribución eficiente y puntual en más de 400 puntos de venta físicos a lo largo de todo el Perú, asegurando un servicio integral que optimiza tiempos y costos. Nuestra estrategia logística cubre el 100% del territorio nacional.",
+      "descripcion": "Garantizamos distribución eficiente y puntual en más de 300 puntos de venta físicos directos e indirectos a lo largo de todo el Perú, asegurando un servicio integral que optimiza tiempos y costos. Nuestra estrategia logística cubre el 100% del territorio nacional.",
       "regiones": {
         "norte": [
           "Chancafe Norte",
@@ -126,7 +126,6 @@
         "centro": [
           "Yataco",
           "EH Inversiones",
-          "Inche",
           "Codisa & El Siglo"
         ],
         "oriente": [
@@ -149,7 +148,7 @@
     }
   },
   "line": {
-    "titulo": "LINE",
+    "titulo": "ROADMAP",
     "cards": [
       {
         "title": "2024.Q4",
@@ -209,11 +208,11 @@
   },
   "tecnologia": {
     "titulo": "Tecnología e Innovación",
-    "descripcion": "Nuestro enfoque en tecnología e innovación nos permite gestionar hasta más de 60,000 transacciones anuales en el corto plazo en el 2026 pensamos redoblar la capacidad instalada. Con herramientas avanzadas de análisis de datos, optimizamos inventarios, logística y ventas, mejorando la experiencia del cliente y maximizando la eficiencia operativa.",
+    "descripcion": "Nuestro compromiso con la tecnología e innovación nos permite gestionar más de 60,000 transacciones anuales. Con planes de duplicar nuestra capacidad instalada para 2026, empleamos herramientas avanzadas de análisis de datos para optimizar inventarios, logística y ventas, mejorando la experiencia del cliente y maximizando la eficiencia operativa.",
     "elementos": [
       {
         "titulo": "Análisis de datos en tiempo real",
-        "descripcion": "Tomamos decisiones basadas en datos que mejoran la rotación de inventarios y optimizan la gestión de productos.",
+        "descripcion": "Nuestras decisiones, respaldadas por datos, optimizan la rotación de inventarios y perfeccionan la gestión de productos.",
         "imagen": {
           "src": "asset/img/tiempo-real.png",
           "alt": "Análisis de datos en tiempo real"
@@ -221,7 +220,7 @@
       },
       {
         "titulo": "Gestión automatizada",
-        "descripcion": "Automatizamos envíos, gestión de precios y catálogos en los principales marketplaces, reduciendo errores humanos en un 90%.",
+        "descripcion": "Implementamos la automatización en envíos, precios y catálogos en los principales marketplaces, logrando una reducción del 90% en errores humanos.",
         "imagen": {
           "src": "asset/img/gestion.png",
           "alt": "Gestión automatizada"

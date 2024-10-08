@@ -1,6 +1,6 @@
 {
   "pie_de_pagina": {
-    "contacto": "Contact us to be part of our distribution network",
+    "contacto": "Contact us to become part of our distribution network",
     "correo": "accounting@spacebrands.shop",
     "unirse": "Join our group of strategic partners",
     "derechos": "All copyright reserved by Space Brands © 2024"
@@ -10,27 +10,27 @@
     "estrategia": "Strategy",
     "servicios": "Services",
     "canales_de_ventas": "Sales Channels",
-    "linea": "LINE",
+    "linea": "ROADMAP",
     "tecnologia": "Technology"
   },
   "barra_lateral": {
     "catalogo": "Product Catalog",
-    "ubicacion_sur": "Location Lima Sur",
-    "ubicacion_norte": "Location Lima Norte - Center",
+    "ubicacion_sur": "South Lima Location",
+    "ubicacion_norte": "North Lima - Center Location",
     "contacto": "Contact",
     "saber_mas": "Learn more - Hot Prices"
   },
   "inicio": {
-    "titulo": "Leading distributor of the best brands in technology and appliances",
+    "titulo": "Leading distributor of the best technology and appliance brands",
     "subtitulo": "Specialists in offline and online channels, we provide exceptional experiences in prices and products.",
-    "descripcion": "Space Brands is a leader in the distribution of technology and appliances in LATAM, with over 20 years of experience in retail. We connect leading brands with retailers and marketplaces, managing a portfolio of over 500 products."
+    "descripcion": "Space Brands is a leader in the distribution of technology and appliances in LATAM, with a staff of 10 years of experience in Retail. We connect leading brands with retailers and marketplaces, managing a portfolio of over 500 products."
   },
   "estrategia": {
     "titulo": "Our Strategy",
     "elementos": [
       {
         "titulo": "Aggressive Sales",
-        "descripcion": "We integrate online and offline channels to maximize the impact of our brands, consolidating a network with over 30 alliances in retailers and marketplaces.",
+        "descripcion": "We integrate online and offline channels to maximize the impact of our brands, consolidating a network with more than 15 partnerships in retailers and marketplaces.",
         "imagen": {
           "src": "asset/svg/estrategia/img1.svg",
           "alt": "Aggressive Sales"
@@ -38,7 +38,7 @@
       },
       {
         "titulo": "Technological Leadership",
-        "descripcion": "We collaborate with leaders in technology, managing over 500 SKUs. We project 2,500 monthly transactions for 2025, optimizing deliveries and customer experience.",
+        "descripcion": "We collaborate with technology leaders, managing more than 500 SKUs. We project 2,500 monthly transactions by 2025, optimizing deliveries and customer experience.",
         "imagen": {
           "src": "asset/img/liderazgo.png",
           "alt": "Technological Leadership"
@@ -46,7 +46,7 @@
       },
       {
         "titulo": "International Expansion",
-        "descripcion": "We are ready to grow in the region where we have a network of contacts. Our product adaptation model will position us as leaders in custom OEM products.",
+        "descripcion": "We are ready to expand in the region, backed by a solid network of contacts. Our product adaptation model positions us as leaders in the development of customized OEM solutions.",
         "imagen": {
           "src": "asset/img/lugares.png",
           "alt": "International Expansion"
@@ -54,7 +54,7 @@
       },
       {
         "titulo": "Financial Efficiency",
-        "descripcion": "We apply strategic investments that ensure competitive prices and an annual growth of 15% TEA for our partners and investors.",
+        "descripcion": "We apply strategic investments that ensure competitive prices and an annual growth rate of 15% APR for our partners and investors.",
         "imagen": {
           "src": "asset/img/moneda.png",
           "alt": "Financial Efficiency"
@@ -64,11 +64,11 @@
   },
   "servicios": {
     "titulo": "Specialized Services for Our Partners",
-    "descripcion": "We develop high-performance technological products, designed and adapted to the local market from concept to implementation.",
+    "descripcion": "We develop high-performance technology products, designed and adapted to the local market from concept to implementation.",
     "elementos": [
       {
         "titulo": "Sales Force",
-        "descripcion": "More than 50 specialists in sales and indirect/direct dropshipping that boost the visibility of our brands, maximizing SKU turnover.",
+        "descripcion": "50 sales and dropshipping specialists, both direct and indirect, drive the visibility of our brands, maximizing SKU rotation.",
         "imagen": {
           "src": "asset/img/manos.png",
           "alt": "Sales Force"
@@ -76,7 +76,7 @@
       },
       {
         "titulo": "Marketing",
-        "descripcion": "We manage over 300 points of sale with advanced tools that optimize product availability at the right time and place.",
+        "descripcion": "We manage over 300 points of sale with advanced tools. Our aggressive ad campaigns increase traffic and conversions, optimizing brand positioning and merchandise rotation.",
         "imagen": {
           "src": "asset/img/bocina.png",
           "alt": "Marketing"
@@ -84,149 +84,148 @@
       },
       {
         "titulo": "Technical Service",
-        "descripcion": "We provide efficient support nationwide through our authorized network, with a 97% customer satisfaction rate and quick response times.",
+        "descripcion": "We offer efficient technical support across the country through our network of authorized professionals, achieving 97% customer satisfaction and ensuring fast response times.",
         "imagen": {
           "src": "asset/img/call.png",
           "alt": "Technical Service"
+          }
+        }
+      ]
+    },
+    "socios": {
+      "titulo": "Our Strategic Partners",
+      "descripcion": "We collaborate with more than 30 retailers and/or marketplaces, ensuring comprehensive distribution and strong presence in the main sales channels.",
+      "descripcion_footer": "Our distribution capacity guarantees the presence of our products on the most important online platforms in the region.",
+      "secciones": [
+        {
+          "titulo": "Department Stores"
+        },
+        {
+          "titulo": "Supermarkets"
+        },
+        {
+          "titulo": "Marketplaces"
+        },
+        {
+          "titulo": "Home Centers"
+        },
+        {
+          "titulo": "Specialists"
+        }
+      ],
+      "cobertura": {
+        "titulo": "Offline Distribution Coverage",
+        "descripcion": "We guarantee efficient and timely distribution in more than 300 direct and indirect physical points of sale throughout Peru, ensuring a comprehensive service that optimizes time and costs. Our logistics strategy covers 100% of the national territory.",
+        "regiones": {
+          "norte": [
+            "Chancafe Norte",
+            "Mi Negocio",
+            "E&M Cuba",
+            "Grupo Leoncito"
+          ],
+          "centro": [
+            "Yataco",
+            "EH Inversiones",
+            "Codisa & El Siglo"
+          ],
+          "oriente": [
+            "Importaciones Yucra",
+            "Chancafe Oriente",
+            "Importaciones Laban"
+          ],
+          "sur": [
+            "Corporación Rocio",
+            "Mundovisión-Churata",
+            "A.F Quinto",
+            "Distribuciones Olazábal"
+          ]
+        },
+        "imagenMapa": {
+          "src": "asset/img/mapa.png",
+          "width": 400,
+          "alt": "Map"
         }
       }
-    ]
-  },
-  "socios": {
-    "titulo": "Our Strategic Partners",
-    "descripcion": "We collaborate with over 30 retailers and/or marketplaces, ensuring comprehensive distribution and a strong presence in major sales channels.",
-    "descripcion-footer": "Our distribution capacity guarantees the presence of our products on the most important online platforms in the region.",
-    "secciones": [
-      {
-        "titulo": "Department Stores"
-      },
-      {
-        "titulo": "Specialists"
-      },
-      {
-        "titulo": "Marketplaces"
-      },
-      {
-        "titulo": "Home Center"
-      },
-      {
-        "titulo": "Supermarkets"
-      }
-    ],
-    "cobertura": {
-      "titulo": "Offline Distribution Coverage",
-      "descripcion": "We guarantee efficient and timely distribution in over 400 physical points of sale throughout Peru, ensuring comprehensive service that optimizes time and costs. Our logistics strategy covers 100% of the national territory.",
-      "regiones": {
-        "norte": [
-          "Chancafe Norte",
-          "Mi Negocio",
-          "E&M Cuba",
-          "Grupo Leoncito"
-        ],
-        "centro": [
-          "Yataco",
-          "EH Inversiones",
-          "Inche",
-          "Codisa & El Siglo"
-        ],
-        "oriente": [
-          "Importaciones Yucra",
-          "Chancafe Oriente",
-          "Importaciones Laban"
-        ],
-        "sur": [
-          "Corporación Rocio",
-          "Mundovisión-Churata",
-          "A.F Quinto",
-          "Distribuciones Olazábal"
-        ]
-      },
-      "imagenMapa": {
-        "src": "asset/img/mapa.png",
-        "width": 400,
-        "alt": "Map"
-      }
+    },
+    "line": {
+      "titulo": "ROADMAP",
+      "cards": [
+        {
+          "title": "2024.Q4",
+          "header": "Marketplace Management Improvements",
+          "content": "Implementation of a new application to optimize catalog management in marketplaces such as Ripley, Falabella, and Mercado Libre, with the Hot Prices platform.",
+          "footer": "Increase online sales by 30%"
+        },
+        {
+          "title": "2025.Q1",
+          "header": "Expansion of the Offline Distribution Network",
+          "content": "Incorporation of new regional distributors in the northern and central regions of the country.",
+          "footer": "Cover 95% of the national territory"
+        },
+        {
+          "title": "2025.Q2",
+          "header": "Launch of Hot Prices LATAM",
+          "content": "Expansion of the Hot Prices platform to Bolivia.",
+          "footer": "Reach 10,000 active users"
+        },
+        {
+          "title": "2025.Q3",
+          "header": "Optimization of Smart Logistics",
+          "content": "Implementation of an advanced data-driven logistics solution to improve delivery times and reduce costs by 20%.",
+          "footer": "Real-time logistics in Peru and Bolivia"
+        },
+        {
+          "title": "2025.Q4",
+          "header": "OEM Product Development",
+          "content": "Creation of customized products under the Space Brands label in partnership with OEM manufacturers.",
+          "footer": "Introduce 5 new products"
+        },
+        {
+          "title": "2026.Q1",
+          "header": "Strengthening the Retail Channel",
+          "content": "Expansion of product presence in physical stores in department stores and supermarkets in Peru and Bolivia.",
+          "footer": "Increase offline participation by 20%"
+        },
+        {
+          "title": "2026.Q3",
+          "header": "Total Online and Offline Operations Integration",
+          "content": "Unification of the management platform to control online and physical sales in real-time.",
+          "footer": "Improve operational efficiency by 30%"
+        },
+        {
+          "title": "2027.Q1",
+          "header": "Own E-commerce Platform by Brands",
+          "content": "Launch of an e-commerce platform for the ecosystem of brands for the direct sale of products represented by Space Brands.",
+          "footer": "Reach 1 million monthly visits"
+        },
+        {
+          "title": "2027.Q3",
+          "header": "Expansion into New Latin American Markets",
+          "content": "Entry into Colombia and Chile with a comprehensive distribution offering.",
+          "footer": "30% annual growth in sales"
+        }
+      ]
+    },
+    "tecnologia": {
+      "titulo": "Technology and Innovation",
+      "descripcion": "Our commitment to technology and innovation allows us to manage more than 60,000 annual transactions. With plans to double our installed capacity by 2026, we employ advanced data analysis tools to optimize inventories, logistics, and sales, improving the customer experience and maximizing operational efficiency.",
+      "elementos": [
+        {
+          "titulo": "Real-time Data Analysis",
+          "descripcion": "Our decisions, backed by data, optimize inventory rotation and refine product management.",
+          "imagen": {
+            "src": "asset/img/tiempo-real.png",
+            "alt": "Real-time Data Analysis"
+          }
+        },
+        {
+          "titulo": "Automated Management",
+          "descripcion": "We implement automation in shipments, prices, and catalogs in major marketplaces, reducing human errors by 90%.",
+          "imagen": {
+            "src": "asset/img/gestion.png",
+            "alt": "Automated Management"
+          }
+        }
+      ]
     }
-  },
-  "line": {
-    "titulo": "LINE",
-    "cards": [
-      {
-        "title": "2024.Q4",
-        "header": "Marketplace Management Improvements",
-        "content": "Implementation of a new application to optimize catalog management in marketplaces like Ripley, Falabella, and Mercado Libre, using the Precios Calientes platform.",
-        "footer": "Increase online sales by 30%"
-      },
-      {
-        "title": "2025.Q1",
-        "header": "Offline Distribution Network Expansion",
-        "content": "Incorporation of new regional distributors in the northern and central regions of the country.",
-        "footer": "Cover 95% of the national territory"
-      },
-      {
-        "title": "2025.Q2",
-        "header": "Precios Calientes LATAM Launch",
-        "content": "Expansion of the Precios Calientes platform to Bolivia.",
-        "footer": "Reach 10,000 active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;users"
-      },
-      {
-        "title": "2025.Q3",
-        "header": "Intelligent Logistics Optimization",
-        "content": "Implementation of an advanced data-driven logistics solution to improve delivery times and reduce costs by 20%.",
-        "footer": "Real-time logistics in Peru and Bolivia"
-      },
-      {
-        "title": "2025.Q4",
-        "header": "OEM Product Development",
-        "content": "Creation of custom products under the Space Brands label in partnership with OEM manufacturers.",
-        "footer": "Introduce 5 new &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;products"
-      },
-      {
-        "title": "2026.Q1",
-        "header": "Retail Channel Strengthening",
-        "content": "Expansion of product presence in department stores and supermarkets in Peru and Bolivia.",
-        "footer": "Increase offline participation by 20%"
-      },
-      {
-        "title": "2026.Q3",
-        "header": "Full Integration of Online and Offline Operations",
-        "content": "Unification of the management platform to control real-time sales both online and in physical stores.",
-        "footer": "Improve operational efficiency by 30%"
-      },
-      {
-        "title": "2027.Q1",
-        "header": "Own Brand E-commerce Platform",
-        "content": "Launch of an e-commerce platform by brand ecosystem for direct sale of products represented by Space Brands.",
-        "footer": "Reach 1 million monthly visits"
-      },
-      {
-        "title": "2027.Q3",
-        "header": "Expansion to New Latin American Markets",
-        "content": "Entry into Colombia and Chile with a comprehensive distribution offering.",
-        "footer": "30% annual sales &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth"
-      }
-    ]
-  },
-  "tecnologia": {
-    "titulo": "Technology and Innovation",
-    "descripcion": "Our focus on technology and innovation allows us to manage over 60,000 annual transactions in the short term. By 2026, we plan to double our installed capacity. With advanced data analysis tools, we optimize inventories, logistics, and sales, improving customer experience and maximizing operational efficiency.",
-    "elementos": [
-      {
-        "titulo": "Real-time Data Analysis",
-        "descripcion": "We make data-driven decisions that improve inventory turnover and optimize product management.",
-        "imagen": {
-          "src": "asset/img/tiempo-real.png",
-          "alt": "Real-time Data Analysis"
-        }
-      },
-      {
-        "titulo": "Automated Management",
-        "descripcion": "We automate shipping, price management, and catalogs in major marketplaces, reducing human errors by 90%.",
-        "imagen": {
-          "src": "asset/img/gestion.png",
-          "alt": "Automated Management"
-        }
-      }
-    ]
-  }
-}
+  }  
