@@ -689,8 +689,8 @@ body {
 
 @media (max-width: 768px) {
   .content {
-    overflow: hidden !important;
-    backface-visibility: hidden;
+    overflow: scroll !important;
+        backface-visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
