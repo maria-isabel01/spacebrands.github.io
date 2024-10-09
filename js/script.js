@@ -255,14 +255,18 @@ function applyTranslations(translations) {
 
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  const scrollAmount = 300;
+  const scrollAmount = 268;
 
+  let cards = document.querySelectorAll('.card'); // let en vez de const para poder actualizar
+const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight)+18;
+
+  console.log(cardWidth)
   prevBtn.addEventListener('click', () => {
-    document.getElementById('card-container').scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    document.getElementById('card-container').scrollBy({ left: -cardWidth, behavior: 'smooth' });
   });
 
   nextBtn.addEventListener('click', () => {
-    document.getElementById('card-container').scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    document.getElementById('card-container').scrollBy({ left: cardWidth, behavior: 'smooth' });
   });
 
 
