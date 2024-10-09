@@ -165,7 +165,8 @@ footer {
     padding: 0px !important;
     padding-left: 3rem !important;
     padding-right: 3rem !important;
-    padding-top: 5rem !important;
+    padding-top: 6rem !important;
+    padding-bottom: 3rem !important;
   }
 
   footer {
@@ -697,7 +698,9 @@ body {
     height: 100%;
     z-index: 100;
   }
-
+  .margin-top-10 {
+    margin-top: 50px !important;
+}
   .line {
     .fix-10-12 {
       padding-bottom: 1rem;
