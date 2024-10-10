@@ -9,6 +9,7 @@
     "inicio": "Inicio",
     "estrategia": "Estrategia",
     "servicios": "Servicios",
+    "marcas": "Marcas",
     "canales_de_ventas": "Canales de Ventas",
     "linea": "ROADMAP",
     "tecnologia": "Tecnología"
@@ -91,6 +92,9 @@
         }
       }
     ]
+  },
+  "marcas":{
+    "titulo": "Distribucción de Marcas"
   },
   "socios": {
     "titulo": "Nuestros Socios Estratégicos",

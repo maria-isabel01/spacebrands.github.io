@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 1,
   });
 
+
   // Manejo de audio
   var audio = document.getElementById("background-audio");
   audio.volume = 0.2;
@@ -62,6 +63,7 @@ function applyTranslations(translations) {
   menuSection.querySelector('a.spacebrands').textContent = translations.navegacion.inicio;
   menuSection.querySelector('a.estrategia').textContent = translations.navegacion.estrategia;
   menuSection.querySelector('a.abordar').textContent = translations.navegacion.servicios;
+  menuSection.querySelector('a.marcas').textContent = translations.navegacion.marcas;
   menuSection.querySelector('a.canales').textContent = translations.navegacion.canales_de_ventas;
   menuSection.querySelector('a.line').textContent = translations.navegacion.linea;
   menuSection.querySelector('a.tecnologia').textContent = translations.navegacion.tecnologia;
@@ -143,6 +145,11 @@ function applyTranslations(translations) {
     });
   }
 
+  //Marcas
+  const marcasSection = document.querySelector('[data-name="marcas"]');
+  if (marcasSection) {
+    marcasSection.querySelector('h1.coreTitle').textContent = translations.marcas.titulo;
+  }
   //Parnet
   const sociosSection = document.querySelector('[data-cid="slide-01-a330447f"]');
   if (sociosSection) {
@@ -257,8 +264,8 @@ function applyTranslations(translations) {
   const nextBtn = document.getElementById('nextBtn');
   const scrollAmount = 268;
 
-  let cards = document.querySelectorAll('.card'); // let en vez de const para poder actualizar
-const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight)+18;
+  let cards = document.querySelectorAll('.card');
+  const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight) + 18;
 
   console.log(cardWidth)
   prevBtn.addEventListener('click', () => {

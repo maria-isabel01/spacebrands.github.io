@@ -9,6 +9,7 @@
     "inicio": "Home",
     "estrategia": "Strategy",
     "servicios": "Services",
+    "marcas": "Brands",
     "canales_de_ventas": "Sales Channels",
     "linea": "ROADMAP",
     "tecnologia": "Technology"
@@ -91,6 +92,9 @@
           }
         }
       ]
+    },
+    "marcas":{
+      "titulo": "Brand Distribution"
     },
     "socios": {
       "titulo": "Our Strategic Partners",
