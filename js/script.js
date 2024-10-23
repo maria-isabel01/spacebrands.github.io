@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.then(() => {
-        console.log("El audio se está reproduciendo.");
-      }).catch(error => {
-        console.log("Error al reproducir el audio:", error);
-      });
+      })
     }
   }
 
@@ -77,13 +74,17 @@ function applyTranslations(translations) {
     footer.querySelector('#derecho').textContent = translations.pie_de_pagina.derechos;
   });
 
-  //Home
-  const homeSection = document.querySelector('[data-cid="slide-10-ef5acf51"]');
-  if (homeSection) {
+//Home
+const homeSection = document.querySelector('[data-cid="slide-10-ef5acf51"]');
+if (homeSection) {
+    // Mantén la primera parte sin cambios usando span con translate="no"
     homeSection.querySelector('h1').textContent = translations.inicio.titulo;
     homeSection.querySelector('h5.h5-1').textContent = translations.inicio.subtitulo;
-    homeSection.querySelector('.text-86').textContent = translations.inicio.descripcion;
-  }
+    
+    const descripcionElement = homeSection.querySelector('.text-86');
+    descripcionElement.innerHTML = `<span translate="no">Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con un staff de 10 años de experiencia en Retail.</span> ${translations.inicio.descripcion}`;
+}
+
 
   //Estrategia
   const estrategiaSection = document.querySelector('[data-cid="slide-30-a8e55e42"]');
@@ -267,7 +268,6 @@ function applyTranslations(translations) {
   let cards = document.querySelectorAll('.card');
   const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight) + 18;
 
-  console.log(cardWidth)
   prevBtn.addEventListener('click', () => {
     document.getElementById('card-container').scrollBy({ left: -cardWidth, behavior: 'smooth' });
   });
