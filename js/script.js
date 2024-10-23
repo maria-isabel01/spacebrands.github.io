@@ -85,7 +85,6 @@ if (homeSection) {
     descripcionElement.innerHTML = `<span translate="no">Space Brands es líder en la distribución de tecnología y electrodomésticos en LATAM, con un staff de 10 años de experiencia en Retail.</span> ${translations.inicio.descripcion}`;
 }
 
-
   //Estrategia
   const estrategiaSection = document.querySelector('[data-cid="slide-30-a8e55e42"]');
   if (estrategiaSection) {
